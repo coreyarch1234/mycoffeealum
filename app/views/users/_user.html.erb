@@ -1,0 +1,14 @@
+<table class="table table-filter">
+  <tbody>
+    <tr>
+      <td>
+        <div class="media">
+          <%= link_to image_tag('https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg'), user, :class=>"pull-left"%>
+            <span class="media-meta pull-right"><%= user.role %></span>
+            <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
+            <p><%= user.about_me %></p>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
