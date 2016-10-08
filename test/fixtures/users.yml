@@ -1,21 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  role: MyString
-  about_me: MyText
-  skill: MyText
-  contact: MyText
-  admin: false
-
-two:
-  first_name: MyString
-  last_name: MyString
-  email: MyString
-  role: MyString
-  about_me: MyText
-  skill: MyText
-  contact: MyText
+  first_name: Kojin
+  last_name: Oshiba
+  email: kojin.oshiba@students.makeschool.com
+  role: student
+  about_me: Hi, my name is Kojin
+  skill: I can code in ruby!
+  contact: I won't give you my contact!
   admin: false

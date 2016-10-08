@@ -1,44 +1,27 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
-
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
-
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Role:</strong>
-  <%= @user.role %>
-</p>
-
-<p>
-  <strong>About me:</strong>
-  <%= @user.about_me %>
-</p>
-
-<p>
-  <strong>Skill:</strong>
-  <%= @user.skill %>
-</p>
-
-<p>
-  <strong>Contact:</strong>
-  <%= @user.contact %>
-</p>
-
-<p>
-  <strong>Admin:</strong>
-  <%= @user.admin %>
-</p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="result-wrapper col-md-8 col-md-offset-2">
+  <table class="table table-filter">
+    <tbody>
+      <tr>
+        <td>
+          <div class="media">
+            <div class="col-md-2">
+              <%= link_to image_tag('https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg'), @user, :class=>"pull-left"%>
+            </div>
+            <div class="col-md-10">
+              <span class="media-meta pull-right"><%= @user.role %></span>
+              <h3><%= "#{@user.first_name} #{@user.last_name}" %></h3>
+              <h4>About</h4>
+              <p><%= @user.about_me %></p>
+              <h4>Skill</h4>
+              <p><%= @user.skill %></p>
+              <h4>Contact</h4>
+              <p><%= @user.contact %></p>
+              <%= link_to 'Back', users_path %>
+            </div>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+<div>
