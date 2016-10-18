@@ -3,9 +3,14 @@ require 'test_helper'
 class UsersControllerTest < ActionDispatch::IntegrationTest
   setup do
     @user = users(:one)
-    @invalid_user1 = User.new(first_name: "Maria", last_name: "Xu", email: "maria.xu@students.makeschool.com")
-    @invalid_user2 = User.new(first_name: "Maria", last_name: "Xu", email: "maria.xu@students", password: "testxyz", password_confirmation: "testxyz")
-    @valid_user = User.new(first_name: "Maria", last_name: "Xu", email: "maria.xu@students.makeschool.com", password: "testxyz", password_confirmation: "testxyz")
+    @invalid_user1 = User.new(first_name: "Kojin", last_name: "Oshiba", email: "kojinoshiba@mit.ed")
+    @invalid_user2 = User.new(first_name: "Corey", last_name: "Harrilal", email: "Corey@alum", password: "testxyz", password_confirmation: "testxyz")
+    @valid_user = User.new(first_name: "Corey", last_name: "Harrilal", email: "corey.Harrilal@alum.mit.edu", password: "testxyz", password_confirmation: "testxyz")
+  end
+
+  test "should get new" do
+    get signup_path
+    assert_response :success
   end
 
   test "should get index" do

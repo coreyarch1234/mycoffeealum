@@ -54,3 +54,6 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 # For secure password
 gem 'bcrypt',         '3.1.11'
+
+# assert template
+gem 'rails-controller-testing'

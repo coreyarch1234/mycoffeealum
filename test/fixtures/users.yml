@@ -3,9 +3,10 @@
 one:
   first_name: Kojin
   last_name: Oshiba
-  email: kojin.oshiba@students.makeschool.com
+  email: kojin.oshiba@mit.edu
   role: student
   about_me: Hi, my name is Kojin
   skill: I can code in ruby!
   contact: I won't give you my contact!
   admin: false
+  password_digest: <%= User.digest('password') %>

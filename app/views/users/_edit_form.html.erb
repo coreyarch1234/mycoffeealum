@@ -1,0 +1,62 @@
+<%= form_for(user) do |f| %>
+
+    <% if user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+        <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="field">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, :class=>"form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name, :class=>"form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.text_field :email, :class=>"form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :password %>
+      <%= f.password_field :password, :class=>"form-control" %>
+    </div >
+
+    <div class="field">
+      <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, :class=>"form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :role %>
+      <%= f.select :role, [ 'Student', 'Instructor', 'Staff' ], :prompt => 'Select One' %>
+    </div>
+
+    <div class="field">
+      <%= f.label :about_me %>
+      <%= f.text_field :about_me, :class=>"form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :skill %>
+      <%= f.text_field :skill, :class=>"form-control" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :contact %>
+      <%= f.text_field :contact, :class=>"form-control" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  <% end %>
