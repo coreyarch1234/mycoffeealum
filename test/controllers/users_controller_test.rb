@@ -14,12 +14,10 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get index" do
+    # login
+    post login_path, params: { session: { email:    @user.email,
+                                          password: 'password' } }
     get users_url
-    assert_response :success
-  end
-
-  test "should get new" do
-    get new_user_url
     assert_response :success
   end
 
@@ -38,11 +36,17 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should show user" do
+    # login
+    post login_path, params: { session: { email:    @user.email,
+                                          password: 'password' } }
     get user_url(@user)
     assert_response :success
   end
 
   test "should get edit" do
+    # login
+    post login_path, params: { session: { email:    @user.email,
+                                          password: 'password' } }
     get edit_user_url(@user)
     assert_response :success
   end
@@ -53,6 +57,9 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
   # end
 
   test "should destroy user" do
+    # login
+    post login_path, params: { session: { email:    @user.email,
+                                          password: 'password' } }
     assert_difference('User.count', -1) do
       delete user_url(@user)
     end
