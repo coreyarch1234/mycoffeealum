@@ -15,4 +15,12 @@ class User < ApplicationRecord
                                                   BCrypt::Engine.cost
     BCrypt::Password.create(string, cost: cost)
   end
+
+  def self.search(search)
+    search = search.downcase
+    where("LOWER(first_name) LIKE ? or LOWER(last_name) LIKE ? or LOWER(skill) LIKE ? or LOWER(about_me) LIKE ?", "%#{search}%","%#{search}%","%#{search}%","%#{search}%")
+    # where("last_name LIKE ?", "%#{search}%")
+    # where("skill LIKE ?", "%#{search}%")
+    # where("about_me LIKE ?", "%#{search}%")
+  end
 end

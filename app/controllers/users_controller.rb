@@ -4,7 +4,11 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    if params[:search]
+      @users = User.search(params[:search]).order("created_at DESC")
+    else
+      @users = User.all.order('created_at DESC')
+    end
   end
 
   # GET /users/1
@@ -84,4 +88,5 @@ class UsersController < ApplicationController
         redirect_to login_url
       end
     end
+
 end

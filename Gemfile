@@ -57,3 +57,6 @@ gem 'bcrypt',         '3.1.11'
 
 # assert template
 gem 'rails-controller-testing'
+
+# for search functions
+gem 'has_scope'
