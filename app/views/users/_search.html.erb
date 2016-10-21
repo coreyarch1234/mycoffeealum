@@ -4,7 +4,6 @@
         <div class="panel panel-default">
             <div class="panel-body">
                 <form class="form-inline" role="form">
-                    <%= select_tag "role", options_from_collection_for_select(User.all, "student", "alumni") %>
                     <%= form_tag(users_path, :method => "get") do %>
                     <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
                     <%= submit_tag "Search" %>
