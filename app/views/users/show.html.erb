@@ -18,6 +18,9 @@
               <h4>Contact</h4>
               <p><%= @user.contact %></p>
               <%= link_to 'Back', users_path %>
+              <% if current_user = @user %>
+                <%= link_to 'Edit', edit_user_path(@user) %>
+              <% end %>
             </div>
           </div>
         </td>
