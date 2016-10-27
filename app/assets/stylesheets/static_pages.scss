@@ -1,3 +1,301 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// simple-grid
+
+* {
+    box-sizing: border-box;
+}
+
+.grid {
+    width: 1000px;
+    margin: auto;
+
+
+
+}
+
+.clearfix:after {
+    content: " ";
+    display: table;
+    clear: both;
+}
+
+.col-50 {
+    width: 50%;
+}
+
+.col-25 {
+    width: 25%;
+}
+
+.col-75 {
+    width: 75%;
+
+}
+
+.col-100 {
+    width: 100%;
+    height: 300px;
+}
+
+.col-33 {
+    width: 33.333%;
+}
+
+.col-66 {
+    width: 66.666%;
+}
+
+.col-12 {
+    width: 12.5%;
+}
+
+[class*='col-'] {
+    float: left;
+}
+
+p {
+    /*margin: 2em;*/
+}
+
+.row-spacer {
+    height: 2em;
+}
+
+
+// styles
+
+.all-size{
+    /*background-color: #4ABDAC;*/
+    background: rgba(74, 189, 172, 0.75);
+    font-family: 'Oswald', sans-serif;
+}
+
+
+.header {
+    height: 80vh;
+    background: rgba(74, 189, 172, 0.8);
+    color: #F7F7F7;
+    text-align: center;
+
+
+}
+
+.header-text{
+    width: 80%;
+    margin: auto;
+
+}
+.header-text h1{
+  font-size: 1000%;
+}
+.header-text h2{
+
+    font-size: 200%;
+
+}
+
+
+.header-paragraph{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    font-size: 100%;
+    font-weight: lighter;
+
+}
+
+
+
+.student{
+    background: rgba(247, 183, 51, 0.95);
+    height: 700px;
+
+}
+
+.alumni{
+    background: rgba(252, 74, 26, 0.95);
+    height: 700px;
+
+}
+
+
+.exploration-header{
+    margin-left: 22%;
+    margin-right: 22%;
+    margin-top: 150px;
+
+    font-size: 65px;
+
+}
+
+.alumni-header{
+    margin-left: 22%;
+    margin-right: 22%;
+    margin-top: 150px;
+
+    font-size: 65px;
+
+}
+
+.line-separator{
+    position: absolute;
+    top: 25%;
+    height:5px;
+    width: 25%;
+    margin-left: 22%;
+    margin-right: 22%;
+    margin-top: 200px;
+    background:#F7F7F7;
+    border-bottom: 2px solid #F7F7F7;
+
+}
+
+.alumni-line-separator{
+    position: absolute;
+    top: 9%;
+    height:5px;
+    width: 25%;
+    margin-left: 22%;
+    margin-right: 22%;
+    margin-top: 200px;
+    background:#F7F7F7;
+    border-bottom: 2px solid #F7F7F7;
+
+}
+
+.exploration-text{
+    margin-left: 22%;
+    margin-right: 22%;
+    font-size: 30px;
+
+}
+
+.alumni-text{
+    margin-left: 22%;
+    margin-right: 22%;
+    font-size: 30px;
+
+}
+
+.student {
+    /*height: 300px;*/
+    position: relative;
+    /*background-color: #F7B733;*/
+    /*color: #F7F7F7;*/
+}
+
+.alumni  {
+
+    position: relative;
+
+    color: #F7F7F7;
+}
+
+#tester{
+    background-color: #A239CA;
+}
+
+#test{
+
+    background-color: #E9C893;
+}
+
+
+.coffee {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    background-image: url('/assets/CoffeeAlumCoffee.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 25%;
+    left: 20%;
+
+}
+
+.quote-text {
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    right: 8%;
+    font-size: 55px;
+
+
+}
+
+.alumni-quote-text {
+    position: absolute;
+    top: 15%;
+    left: 8%;
+    right: 8%;
+    font-size: 45px;
+
+
+}
+
+.author-line-separator{
+    position: absolute;
+    top: 40%;
+    height:3px;
+    width: 10%;
+    margin-left: 11%;
+    margin-top: 200px;
+    background:#F7F7F7;
+    border-bottom: 2px solid #F7F7F7;
+
+}
+
+.author{
+    position: absolute;
+    top: 36%;
+
+    margin-left: 22%;
+    margin-top: 200px;
+    font-size: 30px;
+}
+
+
+.center-title {
+    text-align: center;
+}
+
+#nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#nav a {
+    display: block;
+    float: right;
+    padding: 1em;
+    margin: 0.5em;
+    text-decoration: none;
+}
+
+.title-coffee{
+    font-family: 'Open Sans', sans-serif;
+    color: #F7F7F7;
+
+}
+
+.title-alum{
+    font-family: 'Open Sans', sans-serif;
+    color: #F7B733;
+
+}
+
+.clear-box{
+    clear:both;
+}
+
+
+
+/* Needed for Nav styles!!!!!! */
+.selected {
+    color: white;
+    background-color: black
+}
