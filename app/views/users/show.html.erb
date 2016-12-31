@@ -11,15 +11,11 @@
             <div class="col-md-10">
               <span class="media-meta pull-right"><%= @user.role %></span>
               <h3><%= "#{@user.first_name} #{@user.last_name}" %></h3>
-              <h4>About</h4>
+              <h4> <%= "#{@user.coffee_title}" %></h4>
               <hr />
-              <p><%= @user.about_me %></p>
-              <h4>Skill</h4>
+              <h4> <%= "#{@user.about_me}" %></h4>
               <hr />
-              <p><%= @user.skill %></p>
-              <h4>Contact</h4>
-              <hr />
-              <p><%= @user.contact %></p>
+              <h4> <%= "#{@user.contact}" %></h4>
               <%= link_to 'Back', users_path %>
               <% if current_user == @user %>
                 <%= link_to 'Edit', edit_user_path(@user) %>
