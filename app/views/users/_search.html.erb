@@ -1,0 +1,16 @@
+<div class="search-wrapper col-md-12">
+  <div class="row">
+    <div id="filter-panel" class="filter-panel">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <form class="form-inline" role="form">
+                    <%= form_tag(users_path, :method => "get") do %>
+                    <%= text_field_tag :search, params[:search], placeholder: "Search Users" %>
+                    <%= submit_tag "Search" %>
+                    <% end %>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
