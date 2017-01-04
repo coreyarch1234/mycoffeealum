@@ -15,13 +15,6 @@ ActiveRecord::Schema.define(version: 20170103005820) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "tag_users", force: :cascade do |t|
-    t.integer  "tag_id"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
     t.string   "taggable_type"
@@ -73,7 +66,7 @@ ActiveRecord::Schema.define(version: 20170103005820) do
     t.string   "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true, using: :btree
+    t.string   "unconfirmed_email"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
