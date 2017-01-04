@@ -13,3 +13,22 @@ body,
     -o-background-size: cover;
     background-size: cover;
 }
+
+.flex-center{
+    width: 100%;
+    margin:auto;
+    padding: 3em;
+    text-align: center;
+    color: white;
+}
+
+.flex-center h1{
+  font-size: 500%;
+  top: 5em;
+  font-family: "Arial";
+
+}
+.flex-center h2{
+    font-size: 250%;
+    font-family: "Arial";
+}
