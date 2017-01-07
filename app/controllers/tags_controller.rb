@@ -14,6 +14,7 @@ class TagsController < ApplicationController
 
   # GET /tags/new
   def new
+    
     @tag = Tag.new
   end
 
@@ -25,7 +26,6 @@ class TagsController < ApplicationController
   # POST /tags.json
   def create
     @tag = Tag.new(tag_params)
-
     respond_to do |format|
       if @tag.save
         format.html { redirect_to @tag, notice: 'Tag was successfully created.' }

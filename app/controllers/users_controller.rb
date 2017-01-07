@@ -4,7 +4,12 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.search(params[:search])
+    # @users = User.search(params[:search])
+    if params[:tag]
+        @users = User.tagged_with(params[:tag])
+    else
+        @users = User.all
+    end
   end
 
   # GET /users/1

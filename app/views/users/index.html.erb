@@ -5,7 +5,7 @@
     </header>
     <section id="search" class="alt">
       <%= form_tag users_path, :method => 'get' do %>
-        <%= collection_check_boxes :options, :tag_ids, Tag.order(:name), :id, :name, {multiple: true} %>
+        <%= collection_check_boxes :options, :tag_ids, Tag.order(:name), :id, :name, {multiple: true}%>
         <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
         <%= submit_tag "Search", :name => nil, :style => "float:left;"%>
       <% end %>
@@ -16,6 +16,7 @@
 
           <article>
             <%= link_to user do %>
+            <p>Tags: <%= raw user.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
               <!-- image -->
               <span class="image object">
                     <%= image_tag user.picture.url if user.picture? %>
