@@ -1,5 +1,5 @@
 <header id="header">
-  <%= link_to image_tag("sidelogo.png"), users_path, class: 'logo' %>
+  <%= link_to image_tag("logo.png"), users_path, class: 'logo' %>
   <ul class="icons">
     <% if user_signed_in? %>
       <li><%= link_to "Profile",  user_path(current_user), class: "logo" %></li>

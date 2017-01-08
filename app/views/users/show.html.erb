@@ -6,6 +6,8 @@
         <p><%= @user.title %></p>
       </header>
       <p><%= @user.description %></p>
+      <%= link_to image_tag("linkedin"), @user.linkedin_url if @user.linkedin_url? %>
+
       <ul class="actions">
         <%= mail_to @user.email, "Contact", class: "button big", subject: "[via Make School CoffeeAlum] Request for a chat",
          body: "Dear #{@user.first_name}, \n\n My name is #{current_user.first_name} and I'm a #{current_user.title}. #{current_user.description} \n\n I took a look at your profile, and got really interested in talking with you. \n Would it be possible to schedule a coffee or talk over skype? \n\n Best, \n #{current_user.first_name} #{current_user.last_name}" %>

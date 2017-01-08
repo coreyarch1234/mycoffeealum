@@ -5,6 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
   mount_uploader :picture, PictureUploader
   validate  :picture_size, :tag_count
+  validates :first_name, presence: true, length: { maximum: 20 }, :on => :update
+  validates :last_name, presence: true, length: { maximum: 20 }, :on => :update
+  validates :title, length: { maximum: 100 }
+  validates :description, length: { maximum: 400 }
+  VALID_LINKEDIN_REGEX = /|(?:(?:http|https):\/\/)?(?:www.)?linkedin.com\/in\/.*/
+  validates :linkedin_url, format: { with: VALID_LINKEDIN_REGEX }
   enum role: [:student, :mentor, :staff]
   acts_as_taggable
 
