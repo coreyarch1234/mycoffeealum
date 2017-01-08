@@ -16,7 +16,7 @@
 
           <article>
             <%= link_to user do %>
-            <p>Tags: <%= raw user.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
+            <p>Tags: <%= raw user.tag_list.map { |t| link_to t, tag_user_path(t) }.join(', ') %></p>
               <!-- image -->
               <span class="image object">
                     <%= image_tag user.picture.url if user.picture? %>
