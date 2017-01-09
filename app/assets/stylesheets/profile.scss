@@ -1,0 +1,39 @@
+.content h1{
+    font-size: 30px;
+}
+
+.content p{
+    font-size: 15px;
+    text-transform: capitalize;
+}
+
+.description p{
+    font-size: 14px;
+    font-family: "Roboto Slab", serif;
+    font-weight:lighter;
+    line-height: 1.6em;
+    letter-spacing: 0.075em;
+    margin-top: -0.5em;
+    text-transform: capitalize;
+}
+
+.contact .actions{
+    margin-left: auto;
+}
+
+.tag {
+  padding-top: 10%;
+  width: 75%;
+}
+
+.tag p{
+    font-size: 12px;
+    font-family: "Roboto Slab", serif;
+    color: white;
+    text-align: center;
+    background: #13b4ff;
+    font-weight: 550;
+    letter-spacing: 0.075em;
+    margin-top: -0.5em;
+    text-transform: capitalize;;
+}
