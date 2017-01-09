@@ -3,9 +3,21 @@
     <header class="major">
       <h2>Users</h2>
     </header>
+    <!-- Defines an array of tag names to use in the search filter -->
+    <% tag_array = Array.new %>
+    <% @tags.each do |tag| %>
+        <% tag_array.append(tag.name) %>
+    <% end %>
+
     <section id="search" class="alt">
       <%= form_tag users_path, :method => 'get' do %>
-        <%= collection_check_boxes :options, :tag_ids, Tag.order(:name), :id, :name, {multiple: true}%>
+        <!-- <%= collection_check_boxes :options, :tag_ids, Tag.order(:name), :id, :name, {multiple: true}%> -->
+        <%= collection_check_boxes :options, :tag_ids, Tag.order(:name), :id, :name, {multiple: true} do |b|%>
+        <%= b.check_box {b.check_box + tag_user_path(b.text)} %>
+        <%= b.label {link_to b.text, tag_user_path(b.text)} %>
+            <!-- <%= link_to b.text, tag_user_path(b.text)  %> -->
+
+        <% end %>
         <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
         <%= submit_tag "Search", :name => nil, :style => "float:left;"%>
       <% end %>
@@ -13,10 +25,8 @@
     </section>
     <div class="posts">
       <% @users.each do |user| %>
-
           <article>
             <%= link_to user do %>
-            <p>Tags: <%= raw user.tag_list.map { |t| link_to t, tag_user_path(t) }.join(', ') %></p>
               <!-- image -->
               <span class="image object">
                     <%= image_tag user.picture.url if user.picture? %>

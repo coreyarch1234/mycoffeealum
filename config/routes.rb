@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  # get 'tags/:tag', to: 'users#index', as: :tag_user
   resources :tags
+  get 'tag/:tag', to: 'users#index', as: :tag_user
+
   devise_for :users, :path => 'u', controllers: {
     sessions: 'users/sessions',
     registrations: 'users/registrations',

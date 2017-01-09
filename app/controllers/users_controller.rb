@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     # @users = User.search(params[:search])
+    @tags = Tag.all
     if params[:tag]
         @users = User.tagged_with(params[:tag])
     else
