@@ -6,7 +6,7 @@
         <p><%= @user.title %></p>
       </header>
       <p><%= @user.description %></p>
-      <%= link_to image_tag("linkedin"), @user.linkedin_url if @user.linkedin_url? %>
+      <!-- <%= link_to image_tag("linkedin"), @user.linkedin_url if @user.linkedin_url? %> -->
 
       <ul class="actions">
         <%= mail_to @user.email, "Contact", class: "button big", subject: "[via Make School CoffeeAlum] Request for a chat",
