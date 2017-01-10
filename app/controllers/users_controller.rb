@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  before_filter :validate_user, :only => :edit
   # GET /users
   # GET /users.json
   def index
@@ -57,4 +58,8 @@ class UsersController < ApplicationController
       params.require(:user).permit(:first_name, :last_name, :title, :description, :role,  :linkedin_url, :picture, :tag_list, :tag, { tag_ids: [] }, :tag_ids)
     end
 
+
+     def validate_user
+      redirect_to user_path unless current_user.id.to_s == params[:id]
+     end
 end
