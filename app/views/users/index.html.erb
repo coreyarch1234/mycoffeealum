@@ -1,33 +1,83 @@
 <!-- Section -->
-  <section>
+<div class="container">
+    <div class="row">
+        <div class="col-6 col-md-4">
+            <section>
+              <header class="major">
+                <h3>Popular Tags</h3>
+              </header>
+              <!-- Defines an array of tag names to use in the search filter -->
+              <% tag_array = Array.new %>
+              <% @tags.each do |tag| %>
+                  <% tag_array.append(tag.name) %>
+              <% end %>
+
+              <section id="search" class="alt">
+              <% tag_array.each do |tag| %>
+                 <div class="tag-thin-gap"><p class="blue"><%= link_to tag, tag_user_path(tag) %></p></div>
+              <%end%>
+              </section>
+            </section>
+        </div>
+
+        <div class="col-md-8">
+            <section>
+              <header class="major">
+                <h2>Users</h2>
+              </header>
+              <section id="search" class="alt">
+                  <%= form_tag users_path, :method => 'get' do %>
+                      <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
+                      <!-- <%= submit_tag "Search", :name => nil, :style => "float:left; "%> -->
+                  <% end %>
+
+              </section>
+              <div class="posts">
+                <% @users.each do |user| %>
+                    <article>
+                      <%= link_to user do %>
+                        <!-- image -->
+                        <span class="image object">
+                              <%= image_tag user.picture.url if user.picture? %>
+                        </span>
+                        <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
+                        <p><%= user.title %></p>
+                        <ul class="actions">
+                          <li><% link_to "MORE", users_path(user) %></li>
+                        </ul>
+                      <% end %>
+                    </article>
+                <% end %>
+              </div>
+            </section>
+
+        </div>
+    </div>
+
+</div>
+
+  <!-- <section>
     <header class="major">
       <h2>Users</h2>
     </header>
-    <!-- Defines an array of tag names to use in the search filter -->
     <% tag_array = Array.new %>
     <% @tags.each do |tag| %>
         <% tag_array.append(tag.name) %>
     <% end %>
 
     <section id="search" class="alt">
-      <%= form_tag users_path, :method => 'get' do %>
-        <!-- <%= collection_check_boxes :options, :tag_ids, Tag.order(:name), :id, :name, {multiple: true}%> -->
-        <%= collection_check_boxes :options, :tag_ids, Tag.order(:name), :id, :name, {multiple: true} do |b|%>
-        <%= b.check_box {b.check_box + tag_user_path(b.text)} %>
-        <%= b.label {link_to b.text, tag_user_path(b.text)} %>
-            <!-- <%= link_to b.text, tag_user_path(b.text)  %> -->
+    <% tag_array.each do |tag| %>
+       <div class="tag-thin-gap"><p class="blue"><%= link_to tag, tag_user_path(tag) %></p></div>
+    <%end%>
 
-        <% end %>
         <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
         <%= submit_tag "Search", :name => nil, :style => "float:left;"%>
-      <% end %>
 
     </section>
     <div class="posts">
       <% @users.each do |user| %>
           <article>
             <%= link_to user do %>
-              <!-- image -->
               <span class="image object">
                     <%= image_tag user.picture.url if user.picture? %>
               </span>
@@ -41,4 +91,4 @@
 
       <% end %>
     </div>
-  </section>
+  </section> -->
