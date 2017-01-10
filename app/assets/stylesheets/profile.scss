@@ -41,7 +41,7 @@
 .tag-thin-gap{
     padding: 0;
     font-size: 12px;
-    width: 50%;
+    width: 15em;
     font-family: "Roboto Slab", serif;
     color: black;
     text-align: center;
@@ -58,4 +58,8 @@
 
 .edit-image{
     float: right;
+}
+
+.tag-index{
+    float: left;
 }

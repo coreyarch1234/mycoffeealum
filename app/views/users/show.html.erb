@@ -14,8 +14,8 @@
         <p><%= @user.role %></p>
         <p><%= @user.title %></p>
         <% tag_array = Array.new %>
-        <% @tags.each do |tag| %>
-            <% tag_array.append(tag.name) %>
+        <% @user.tag_list.each do |tag| %>
+            <% tag_array.append(tag) %>
         <% end %>
         <% tag_array.each do |tag| %>
              <div class="tag"><p class="blue"><%= tag %></p></div>
@@ -30,11 +30,13 @@
         <p><%= @user.description %></p>
   </div>
 
+<% if current_user != @user %>
   <div class= "content contact">
       <ul class="actions">
         <%= mail_to @user.email, "Contact", class: "button big", subject: "[via Make School CoffeeAlum] Request for a chat",
          body: "Dear #{@user.first_name}, \n\n My name is #{current_user.first_name} and I'm a #{current_user.title}. #{current_user.description} \n\n I took a look at your profile, and got really interested in talking with you. \n Would it be possible to schedule a coffee or talk over skype? \n\n Best, \n #{current_user.first_name} #{current_user.last_name}" %>
-         <%= link_to "LinkedIn",  "https://#{@user.linkedin_url}", target: '_blank', class: "button big linkedin" %>
+         <%= link_to "LinkedIn",  "#{@user.linkedin_url}", target: '_blank', class: "button big linkedin" %>
       </ul>
   </div>
+  <% end %>
   </div>

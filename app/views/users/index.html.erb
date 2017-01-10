@@ -28,7 +28,6 @@
               <section id="search" class="alt">
                   <%= form_tag users_path, :method => 'get' do %>
                       <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
-                      <!-- <%= submit_tag "Search", :name => nil, :style => "float:left; "%> -->
                   <% end %>
 
               </section>
@@ -42,6 +41,15 @@
                         </span>
                         <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
                         <p><%= user.title %></p>
+                        <% tag_array_select = Array.new %>
+                        <% user.tag_list.each do |tag| %>
+                            <% tag_array_select.append(tag) %>
+                        <% end %>
+                        <div class="tag-index">
+                            <% tag_array_select.each do |tag| %>
+                               <div class="tag-thin-gap"><p class="blue"><%= link_to tag, tag_user_path(tag) %></p></div>
+                            <%end%>
+                       </div>
                         <ul class="actions">
                           <li><% link_to "MORE", users_path(user) %></li>
                         </ul>
