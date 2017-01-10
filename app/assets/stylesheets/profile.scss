@@ -2,10 +2,10 @@
     font-size: 30px;
 }
 
-.content p{
-    font-size: 15px;
-    text-transform: capitalize;
-}
+// .content p{
+//     font-size: 15px;
+//     text-transform: capitalize;
+// }
 
 .description p{
     font-size: 14px;
@@ -43,7 +43,7 @@
     font-weight: 550;
     letter-spacing: 0.075em;
     margin-top: -0.5em;
-    text-transform: capitalize;;
+    text-transform: capitalize;
 }
 
 .tag-thin-gap{
@@ -55,7 +55,6 @@
     font-weight: 550;
     letter-spacing: 0.075em;
     margin-top: -0.5em;
-    // text-transform: capitalize;
     float: left;
     margin: 2px;
     padding: 0px 5px;
@@ -69,6 +68,14 @@
             color: #fff;
         }
     }
+}
+
+.show-tag{
+    margin: auto;
+    text-decoration: none !important;
+    line-height: 20px !important;
+    border-bottom: none !important;
+    color: #fff;
 }
 
 .edit-image{
