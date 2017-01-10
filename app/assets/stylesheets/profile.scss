@@ -47,9 +47,7 @@
 }
 
 .tag-thin-gap{
-    padding: 0;
     font-size: 12px;
-    width: 15em;
     font-family: "Roboto Slab", serif;
     color: black;
     text-align: center;
@@ -57,7 +55,20 @@
     font-weight: 550;
     letter-spacing: 0.075em;
     margin-top: -0.5em;
-    text-transform: capitalize;;
+    // text-transform: capitalize;
+    float: left;
+    margin: 2px;
+    padding: 0px 5px;
+    border-radius: 8px;
+    p {
+
+        a{
+            text-decoration: none !important;
+            line-height: 15px !important;
+            border-bottom: none !important;
+            color: #fff;
+        }
+    }
 }
 
 .edit-image{
