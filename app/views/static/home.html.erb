@@ -1,15 +1,8 @@
-<body class="view">
-    <!--Mask-->
-    <div>
-        <!--Intro content-->
-        <div class="full-bg-img flex-center">
-            <h1>Coffee Alum</h1>
-            <h2>Make School</h2>
-            <p class='header-paragraph'>Connect with the makers, the entrepreneurs, and the designers of co-working spaces.
-                Take a look at what the members of your co-working space are up to and grab coffee with them.
-            </p>
-        </div>
-        <!--/Intro content-->
-    </div>
-    <!--/.Mask-->
-</body>
+<div id='landing'>
+  <div id='inner'>
+    <%= link_to image_tag("logo.png"), users_path %>
+    <h1>Make School Community in one place</h1>
+    <p>Build real connections with Make School mentors and alumni.</p>
+    <%= link_to "Sign Up", new_user_registration_path, class: "button" %>
+  </div>
+</div>
