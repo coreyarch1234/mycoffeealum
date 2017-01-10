@@ -4,8 +4,12 @@
     <div class="content">
       <header>
       <div>
-        <h1><%= "#{@user.first_name} #{@user.last_name}" %>
-        <%= link_to image_tag("edit-button.png", class: "edit-image"), edit_user_path(@user) %></h1>
+        <% if current_user == @user %>
+            <h1><%= "#{@user.first_name} #{@user.last_name}" %>
+            <%= link_to image_tag("edit-button.png", class: "edit-image"), edit_user_path(@user) %></h1>
+        <% else %>
+            <h1><%= "#{@user.first_name} #{@user.last_name}" %></h1>
+        <% end %>
       </div>
         <p><%= @user.role %></p>
         <p><%= @user.title %></p>

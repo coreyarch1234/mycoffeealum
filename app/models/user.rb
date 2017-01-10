@@ -11,7 +11,7 @@ class User < ApplicationRecord
   validates :description, length: { maximum: 800 }
   VALID_LINKEDIN_REGEX = /|(?:(?:http|https):\/\/)?(?:www.)?linkedin.com\/in\/.*/
   validates :linkedin_url, format: { with: VALID_LINKEDIN_REGEX }
-  enum role: [:student, :mentor, :staff]
+  enum role: [:student, :mentor, :alumni, :staff]
   acts_as_taggable
 
   def self.search(search)
