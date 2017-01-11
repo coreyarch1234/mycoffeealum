@@ -272,18 +272,3 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
 end
-
-config/initializers/devise.rb :
-
-config.mailer_sender = "mail-to-send@from.com"
-config/environments/production.rb :
-
-config.action_mailer.default_url_options = { :host => 'your.websitedomain.com' }
-ActionMailer::Base.smtp_settings = {
-  :address        => "smtp.sendgrid.net",
-  :port           => "3000",
-  :authentication => :plain,
-  :user_name      => ENV['SENDGRID_USERNAME'],
-  :password       => ENV['SENDGRID_PASSWORD'],
-  :domain         => ENV['SENDGRID_DOMAIN']
-}
