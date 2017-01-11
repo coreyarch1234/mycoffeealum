@@ -85,6 +85,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   # For devise
-  config.action_mailer.default_url_options = { :host => 'young-taiga-47888.heroku.com' }
+  config.action_mailer.default_url_options = { :host => 'https://young-taiga-47888.herokuapp.com' }
+  config.action.delivery_method = :smtp
 
 end
