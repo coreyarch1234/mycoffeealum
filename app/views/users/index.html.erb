@@ -4,19 +4,26 @@
         <div class="col-6 col-md-4">
             <section>
               <header class="major">
-                <h3>Popular Tags</h3>
-              </header>
-              <!-- Defines an array of tag names to use in the search filter -->
+              <!-- <% tag_array = Array.new %>
+              <% tag_array_for_mentorship = Array.new %>
+              <% @tags.each do |tag| %>
+                <% if tag.position == "Popular Tags" %>
+                  <% tag_array.append(tag.name) %>
+                <% elsif tag.position == "Tasks" %>
+                  <% tag_array_for_mentorship.append(tag.name) %>
+                <% end %>
+              <% end %> -->
               <% tag_array = Array.new %>
               <% @tags.each do |tag| %>
                   <% tag_array.append(tag.name) %>
               <% end %>
 
+                <h3>Popular Tags</h3>
+              </header>
               <section id="search" class="alt">
               <% tag_array.each do |tag| %>
                  <div class="tag-thin-gap"><p><%= link_to tag, tag_user_path(tag) %></p></div>
               <%end%>
-              </section>
             </section>
         </div>
 
