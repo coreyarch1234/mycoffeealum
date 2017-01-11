@@ -86,6 +86,6 @@ Rails.application.configure do
 
   # For devise
   config.action_mailer.default_url_options = { :host => 'https://young-taiga-47888.herokuapp.com' }
-  config.action.delivery_method = :smtp
+  # config.action.delivery_method = :smtp
 
 end
