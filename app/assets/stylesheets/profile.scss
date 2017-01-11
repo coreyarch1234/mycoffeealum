@@ -2,11 +2,6 @@
     font-size: 30px;
 }
 
-// .content p{
-//     font-size: 15px;
-//     text-transform: capitalize;
-// }
-
 .description p{
     font-size: 14px;
     font-family: "Roboto Slab", serif;
@@ -47,18 +42,20 @@
 }
 
 .tag-thin-gap{
-    font-size: 12px;
+    display: inline-block;
+    height: 20px;
+    border-radius: 10px;
+    padding: 0px 10px;
+    font-size: 0px;
+    background-color: #8b341e;
+    vertical-align: middle;
+    line-height: 20px;
     font-family: "Roboto Slab", serif;
-    color: black;
-    text-align: center;
-    background: #13b4ff;
-    font-weight: 550;
-    letter-spacing: 0.075em;
-    margin-top: -0.5em;
+    font-weight: 400;
     float: left;
     margin: 2px;
-    padding: 0px 5px;
-    border-radius: 8px;
+
+
     p {
 
         a{
@@ -66,6 +63,8 @@
             line-height: 15px !important;
             border-bottom: none !important;
             color: #fff;
+            font: 15px;
+            opacity: 0.9;
         }
     }
 }
