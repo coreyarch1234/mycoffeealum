@@ -38,6 +38,7 @@
                               <%= image_tag user.picture.url if user.picture? %>
                         </span>
                         <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
+                        <p id = "role"><%= user.role %></p>
                         <p><%= user.title %></p>
                         <% tag_array_select = Array.new %>
                         <% user.tag_list.each do |tag| %>
