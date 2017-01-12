@@ -1,14 +1,30 @@
-<!-- Section -->
+<!-- Methods -->
+
+<% tag_array = Array.new %>
+<% @tags.each do |tag| %>
+    <% tag_array.append(tag.name) %>
+<% end %>
+
+<% student_array = Array.new %>
+<% mentor_array = Array.new %>
+<% alumni_array = Array.new %>
+<% temp_array = Array.new %>
+<% @users.each do |user| %>
+    <% if user.role == "student" %>
+        <% student_array.append(user) %>
+    <% elsif user.role == "mentor" %>
+        <% mentor_array.append(user) %>
+    <% else %>
+        <% alumni_array.append(user) %>
+    <% end %>
+<% end %>
+
+
 <div class="container">
     <div class="row">
         <div class="col-6 col-md-4">
             <section>
               <header class="major">
-              <% tag_array = Array.new %>
-              <% @tags.each do |tag| %>
-                  <% tag_array.append(tag.name) %>
-              <% end %>
-
                 <h3>Popular Tags</h3>
               </header>
               <section id="search" class="alt">
@@ -21,7 +37,19 @@
         <div class="col-md-8">
             <section>
               <header class="major">
-                <h2>Users</h2>
+                <!-- <h2>Users</h2> -->
+                <% if current_user.role == "student" || current_user.role == "alumni" %>
+                    <h2><%="Mentors" %></h2>
+                    <% temp_array = mentor_array %>
+
+                <% elsif current_user.role == "mentor" %>
+                    <h2><%= "Students" %></h2>
+                    <% temp_array = student_array %>
+                <% else  %>
+                    <h2><%="Members" %></h2>
+                    <% temp_array = @users %>
+
+                <% end %>
               </header>
               <section id="search" class="alt">
                   <%= form_tag users_path, :method => 'get' do %>
@@ -30,7 +58,7 @@
 
               </section>
               <div class="posts">
-                <% @users.each do |user| %>
+                <% temp_array.each do |user| %>
                     <article>
                       <%= link_to user do %>
                         <!-- image -->
