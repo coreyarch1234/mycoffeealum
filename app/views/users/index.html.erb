@@ -29,9 +29,9 @@
             <section>
               <header class="major">
               <% if current_user.role == "student" || current_user.role == "alumni" %>
-                    <h3>Hash tags are objective tags that you can complete with your mentors.</h3>
+                    <h3>Filter by Tags.</h3>
               <% elsif current_user.role == "mentor" %>
-                   <h3>Hash tags are objective tags that you can complete with your students.</h3>
+                   <h3>Filter by Tags.</h3>
               <% else  %>
                    <h3>Tags</h3>
               <% end %>
