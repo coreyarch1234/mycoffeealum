@@ -36,17 +36,17 @@
     </div>
 
     <div class="field">
-      <%= f.label :title %>
-      <%= f.text_field :title %>
+      <%= f.label 'Job' %>
+      <%= f.text_field :title,  placeholder: "Ruby on Rails Developer, Lyft Engineer, etc." %>
     </div>
 
     <div class="field">
-      <%= f.label :description %>
-      <%= f.text_field :description %>
+      <%= f.label 'Describe Yourself' %>
+      <%= f.text_area :description,  placeholder: "Describe yourself" %>
     </div>
 
     <div class="field">
-      <%= f.label :linkedin_url %>
+      <%= f.label 'LinkedIn' %>
       <%= f.text_field :linkedin_url %>
     </div>
 
