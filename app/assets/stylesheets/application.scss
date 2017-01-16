@@ -17,7 +17,9 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-
+body {
+  background-color:#fafafa;
+}
 
 /* Small Devices, Tablets */
 @media only screen and (min-width : 768px) {

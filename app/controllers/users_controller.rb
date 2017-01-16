@@ -4,11 +4,7 @@ class UsersController < ApplicationController
   before_filter :validate_user, :only => :edit
   # GET /users
   # GET /users.json
-  tag_array = Array.new
-  @tags.each do |tag|
-    tag_array.append(tag.name)
-  end
-
+  
   def index
     if params[:tag]
         @users = User.all_except(current_user).tagged_with(params[:tag])
