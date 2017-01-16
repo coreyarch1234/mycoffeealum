@@ -51,7 +51,7 @@
     </div>
 
     <div class="field">
-      <%= f.label :tag_list, "Tags (at most 5)" %>
+      <%= f.label :tag_list, "Tags (at most 8)" %>
       <%= f.collection_check_boxes :tag_ids, Tag.order(:name), :id, :name, {}, {multiple: true} %>
     </div>
 
