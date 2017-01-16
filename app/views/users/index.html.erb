@@ -52,14 +52,14 @@
               <header class="major">
                 <!-- <h2>Users</h2> -->
                 <% if current_user.role == "student" || current_user.role == "alumni" %>
-                    <h2><%="Mentors" %></h2>
+                    <h2><%="Find" %></h2>
                     <% temp_array = mentor_array + student_array + alumni_array %>
 
                 <% elsif current_user.role == "mentor" %>
                     <h2><%= "Students" %></h2>
                     <% temp_array = student_array %>
                 <% else  %>
-                    <h2><%="Members" %></h2>
+                    <h2><%="Find" %></h2>
                     <% temp_array = @users %>
 
                 <% end %>
