@@ -23,6 +23,10 @@ class User < ApplicationRecord
     end
   end
 
+  def self.all_except(user)
+    where.not(id: user)
+  end
+
   private
 
     # Validates the size of an uploaded picture.

@@ -7,9 +7,9 @@ class UsersController < ApplicationController
   def index
     @tags = Tag.all
     if params[:tag]
-        @users = User.tagged_with(params[:tag])
+        @users = User.all_except(current_user).tagged_with(params[:tag])
     else
-        @users = User.search(params[:search])
+        @users = User.all_except(current_user).search(params[:search])
     end
   end
 
@@ -59,7 +59,7 @@ class UsersController < ApplicationController
     end
 
 
-     def validate_user
-      redirect_to user_path unless current_user.id.to_s == params[:id]
-     end
+   def validate_user
+    redirect_to user_path unless current_user.id.to_s == params[:id]
+   end
 end
