@@ -9,7 +9,7 @@ class User < ApplicationRecord
   validates :last_name, presence: true, length: { maximum: 20 }, :on => :update
   validates :title, length: { maximum: 100 }
   validates :description, length: { maximum: 800 }
-  VALID_LINKEDIN_REGEX = /|(?:(?:http|https):\/\/)?(?:www.)?linkedin.com\/in\/.*/
+  VALID_LINKEDIN_REGEX = /|(?:(?:http|https):\/\/)?(?:www.)?students.makeschool.com\/in\/.*/
   validates :linkedin_url, format: { with: VALID_LINKEDIN_REGEX }
   enum role: [:student, :mentor, :alumni, :staff]
   acts_as_taggable
