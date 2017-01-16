@@ -34,7 +34,7 @@ class User < ApplicationRecord
 
     # Validates the size of an uploaded picture.
     def tag_count
-      if tag_list.size >= 8
+      if tag_list.size > 8
         errors.add(:tag_list, "should be at most 8")
       end
     end
