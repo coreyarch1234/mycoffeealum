@@ -1,8 +1,8 @@
 Started GET "/" for ::1 at 2017-01-03 23:14:09 -0500
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  database "coffeealum_development" does not exist
 ):
-  
+
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:675:in `rescue in connect'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
@@ -320,7 +320,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 70ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
      8:       <p><%= @user.description %></p>
      9:       <ul class="actions">
@@ -329,7 +329,7 @@ ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
     12:       </ul>
     13:       <%= link_to 'Edit', edit_user_path(@user) %> |
     14:       <%= link_to 'Back', users_path %>
-  
+
 app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb__746215181471451147_70352637906820'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -765,16 +765,16 @@ Processing by StaticController#home as HTML
 Completed 500 Internal Server Error in 1549ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "...sition:top; 60%": expected "{", was ";"):
     4:     <title>Coffeealum</title>
     5:     <%= csrf_meta_tags %>
-    6: 
+    6:
     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     9:   </head>
-   10: 
-  
+   10:
+
 app/assets/stylesheets/landing.scss:9
 app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb__4063163432060430369_70116416676780'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -1684,7 +1684,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 33ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
      8:       <p><%= @user.description %></p>
      9:       <ul class="actions">
@@ -1693,7 +1693,7 @@ ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
     12:       </ul>
     13:       <%= link_to 'Edit', edit_user_path(@user) %> |
     14:       <%= link_to 'Back', users_path %>
-  
+
 app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb__2309305985576513805_70116468212700'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -1976,7 +1976,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 129ms (ActiveRecord: 52.5ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `tag_list' for nil:NilClass):
      6:     <section id="search" class="alt">
      7:       <%= form_tag users_path, :method => 'get' do %>
@@ -1985,7 +1985,7 @@ ActionView::Template::Error (undefined method `tag_list' for nil:NilClass):
     10:         <% end %>
     11:         <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
     12:         <%= submit_tag "Search", :name => nil, :style => "float:left;"%>
-  
+
 app/views/users/index.html.erb:9:in `block (2 levels) in _app_views_users_index_html_erb___3518845363924972615_70363344554100'
 app/views/users/index.html.erb:8:in `block in _app_views_users_index_html_erb___3518845363924972615_70363344554100'
 app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___3518845363924972615_70363344554100'
@@ -1998,9 +1998,9 @@ app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___351884536
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (112.8ms)
 Started GET "/users" for ::1 at 2017-01-06 18:02:44 -0500
-  
+
 ArgumentError (wrong number of arguments (given 1, expected 0)):
-  
+
 app/models/user.rb:9:in `<class:User>'
 app/models/user.rb:1:in `<top (required)>'
 config/routes.rb:4:in `block in <top (required)>'
@@ -2014,10 +2014,10 @@ config/routes.rb:1:in `<top (required)>'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (107.3ms)
 Started GET "/users" for ::1 at 2017-01-06 18:03:29 -0500
-  
+
 NoMethodError (undefined method `attr_accessible' for #<Class:0x007ffd85029d08>
 Did you mean?  attr_accessor):
-  
+
 app/models/user.rb:9:in `<class:User>'
 app/models/user.rb:1:in `<top (required)>'
 config/routes.rb:4:in `block in <top (required)>'
@@ -2038,7 +2038,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 101ms (ActiveRecord: 36.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `tag_list' for nil:NilClass):
      6:     <section id="search" class="alt">
      7:       <%= form_tag users_path, :method => 'get' do %>
@@ -2047,7 +2047,7 @@ ActionView::Template::Error (undefined method `tag_list' for nil:NilClass):
     10:         <% end %>
     11:         <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
     12:         <%= submit_tag "Search", :name => nil, :style => "float:left;"%>
-  
+
 app/views/users/index.html.erb:9:in `block (2 levels) in _app_views_users_index_html_erb___3518845363924972615_70363370199780'
 app/views/users/index.html.erb:8:in `block in _app_views_users_index_html_erb___3518845363924972615_70363370199780'
 app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___3518845363924972615_70363370199780'
@@ -2068,7 +2068,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 295ms (ActiveRecord: 71.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `tag_list' for #<User::ActiveRecord_Relation:0x007ffd84c97348>):
      6:     <section id="search" class="alt">
      7:       <%= form_tag users_path, :method => 'get' do %>
@@ -2077,7 +2077,7 @@ ActionView::Template::Error (undefined method `tag_list' for #<User::ActiveRecor
     10:         <% end %>
     11:         <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
     12:         <%= submit_tag "Search", :name => nil, :style => "float:left;"%>
-  
+
 app/views/users/index.html.erb:9:in `block (2 levels) in _app_views_users_index_html_erb___3518845363924972615_70363415621720'
 app/views/users/index.html.erb:8:in `block in _app_views_users_index_html_erb___3518845363924972615_70363415621720'
 app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb___3518845363924972615_70363415621720'
@@ -2096,19 +2096,19 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 91ms (ActiveRecord: 0.0ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:19: syntax error, unexpected '<'
 ...reeze;@output_buffer.append=( <%= raw user.tag_list.map { |t...
 ...                               ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;             end 
+'.freeze;             end
                          ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;       end 
+'.freeze;       end
                    ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:37: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:39: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/users/index.html.erb:19: syntax error, unexpected '<'
 app/views/users/index.html.erb:30: syntax error, unexpected keyword_end, expecting ')'
 app/views/users/index.html.erb:33: syntax error, unexpected keyword_end, expecting ')'
@@ -2131,17 +2131,17 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 128ms (ActiveRecord: 9.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `map' for nil:NilClass
 Did you mean?  tap):
-    16: 
+    16:
     17:           <article>
     18:             <%= link_to user do %>
     19:             <p><%= raw user.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
-    20: 
+    20:
     21:               <!-- image -->
     22:               <span class="image object">
-  
+
 app/views/users/index.html.erb:19:in `block (2 levels) in _app_views_users_index_html_erb___3518845363924972615_70363352196880'
 app/views/users/index.html.erb:18:in `block in _app_views_users_index_html_erb___3518845363924972615_70363352196880'
 app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb___3518845363924972615_70363352196880'
@@ -2162,17 +2162,17 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 143ms (ActiveRecord: 25.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `map' for nil:NilClass
 Did you mean?  tap):
-    16: 
+    16:
     17:           <article>
     18:             <%= link_to user do %>
     19:             <p><%= raw user.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
-    20: 
+    20:
     21:               <!-- image -->
     22:               <span class="image object">
-  
+
 app/views/users/index.html.erb:19:in `block (2 levels) in _app_views_users_index_html_erb___3518845363924972615_70363398263900'
 app/views/users/index.html.erb:18:in `block in _app_views_users_index_html_erb___3518845363924972615_70363398263900'
 app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb___3518845363924972615_70363398263900'
@@ -2193,17 +2193,17 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 256ms (ActiveRecord: 111.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `map' for nil:NilClass
 Did you mean?  tap):
-    16: 
+    16:
     17:           <article>
     18:             <%= link_to user do %>
     19:             <p><%= raw user.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
-    20: 
+    20:
     21:               <!-- image -->
     22:               <span class="image object">
-  
+
 app/views/users/index.html.erb:19:in `block (2 levels) in _app_views_users_index_html_erb___3518845363924972615_70363396120580'
 app/views/users/index.html.erb:18:in `block in _app_views_users_index_html_erb___3518845363924972615_70363396120580'
 app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb___3518845363924972615_70363396120580'
@@ -2242,17 +2242,17 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 96ms (ActiveRecord: 12.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `map' for nil:NilClass
 Did you mean?  tap):
-    16: 
+    16:
     17:           <article>
     18:             <%= link_to user do %>
     19:             <p><%= raw user.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></p>
-    20: 
+    20:
     21:               <!-- image -->
     22:               <span class="image object">
-  
+
 app/views/users/index.html.erb:19:in `block (2 levels) in _app_views_users_index_html_erb___3518845363924972615_70363418528400'
 app/views/users/index.html.erb:18:in `block in _app_views_users_index_html_erb___3518845363924972615_70363418528400'
 app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb___3518845363924972615_70363418528400'
@@ -2321,9 +2321,9 @@ Unpermitted parameter: role
 Completed 500 Internal Server Error in 236ms (ActiveRecord: 59.9ms)
 
 
-  
+
 NoMethodError (undefined method `size' for nil:NilClass):
-  
+
 app/models/user.rb:32:in `tag_count'
 app/controllers/users_controller.rb:23:in `block in update'
 app/controllers/users_controller.rb:22:in `update'
@@ -2357,9 +2357,9 @@ Unpermitted parameter: role
 Completed 500 Internal Server Error in 130ms (ActiveRecord: 65.8ms)
 
 
-  
+
 NoMethodError (undefined method `size' for nil:NilClass):
-  
+
 app/models/user.rb:32:in `tag_count'
 app/controllers/users_controller.rb:23:in `block in update'
 app/controllers/users_controller.rb:22:in `update'
@@ -2393,9 +2393,9 @@ Unpermitted parameter: role
 Completed 500 Internal Server Error in 63ms (ActiveRecord: 7.6ms)
 
 
-  
+
 NoMethodError (undefined method `count' for nil:NilClass):
-  
+
 app/models/user.rb:32:in `tag_count'
 app/controllers/users_controller.rb:23:in `block in update'
 app/controllers/users_controller.rb:22:in `update'
@@ -2432,9 +2432,9 @@ Unpermitted parameter: role
 Completed 404 Not Found in 57ms (ActiveRecord: 12.3ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find all ActsAsTaggableOn::Tags with 'id': (7, 2, 4) (found 2 results, but was looking for 3)):
-  
+
 app/controllers/users_controller.rb:23:in `block in update'
 app/controllers/users_controller.rb:22:in `update'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -2497,9 +2497,9 @@ Unpermitted parameter: role
 Completed 500 Internal Server Error in 34ms (ActiveRecord: 7.0ms)
 
 
-  
+
 NoMethodError (undefined method `size' for nil:NilClass):
-  
+
 app/models/user.rb:32:in `tag_count'
 app/controllers/users_controller.rb:23:in `block in update'
 app/controllers/users_controller.rb:22:in `update'
@@ -2910,10 +2910,10 @@ Completed 200 OK in 158ms (Views: 142.2ms | ActiveRecord: 4.5ms)
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
   [1m[36mActsAsTaggableOn::Tagging Load (6.7ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
 Started GET "/tags/food" for ::1 at 2017-01-08 14:09:13 -0800
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  database "coffeealum_development" does not exist
 ):
-  
+
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:675:in `rescue in connect'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
@@ -2972,10 +2972,10 @@ puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.1ms)
 Started GET "/" for ::1 at 2017-01-08 14:09:16 -0800
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  database "coffeealum_development" does not exist
 ):
-  
+
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:675:in `rescue in connect'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
@@ -3034,10 +3034,10 @@ puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.8ms)
 Started GET "/" for ::1 at 2017-01-08 14:09:36 -0800
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  database "coffeealum_development" does not exist
 ):
-  
+
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:675:in `rescue in connect'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
@@ -3096,10 +3096,10 @@ puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.6ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (101.2ms)
 Started GET "/" for ::1 at 2017-01-08 14:10:32 -0800
-  
+
 ActiveRecord::NoDatabaseError (FATAL:  database "coffeealum_development" does not exist
 ):
-  
+
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:675:in `rescue in connect'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:217:in `initialize'
@@ -3393,7 +3393,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
      8:       <p><%= @user.description %></p>
      9:       <ul class="actions">
@@ -3402,7 +3402,7 @@ ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
     12:       </ul>
     13:       <%= link_to 'Edit', edit_user_path(@user) %> |
     14:       <%= link_to 'Back', users_path %>
-  
+
 app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___3826566753455213522_70230245303160'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -3428,7 +3428,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
      8:       <p><%= @user.description %></p>
      9:       <ul class="actions">
@@ -3437,7 +3437,7 @@ ActionView::Template::Error (undefined method `first_name' for nil:NilClass):
     12:       </ul>
     13:       <%= link_to 'Edit', edit_user_path(@user) %> |
     14:       <%= link_to 'Back', users_path %>
-  
+
 app/views/users/show.html.erb:11:in `_app_views_users_show_html_erb___3826566753455213522_70230203408320'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -4633,18 +4633,18 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 142ms (ActiveRecord: 8.6ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `tag_user_path' for #<#<Class:0x007fbf878ca458>:0x007fbf7d6780d8>
 Did you mean?  tag_path
                tags_path):
-    16: 
+    16:
     17:           <article>
     18:             <%= link_to user do %>
     19:             <p>Tags: <%= raw user.tag_list.map { |t| link_to t, tag_user_path(t) }.join(', ') %></p>
     20:               <!-- image -->
     21:               <span class="image object">
     22:                     <%= image_tag user.picture.url if user.picture? %>
-  
+
 app/views/users/index.html.erb:19:in `block (3 levels) in _app_views_users_index_html_erb__4331146917552539605_70230209709420'
 app/views/users/index.html.erb:19:in `map'
 app/views/users/index.html.erb:19:in `block (2 levels) in _app_views_users_index_html_erb__4331146917552539605_70230209709420'
@@ -4678,9 +4678,9 @@ Processing by TagsController#show as HTML
 Completed 404 Not Found in 3ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Tag with 'id'=iOS):
-  
+
 app/controllers/tags_controller.rb:66:in `set_tag'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -4697,9 +4697,9 @@ Processing by TagsController#show as HTML
 Completed 404 Not Found in 12ms (ActiveRecord: 0.3ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Tag with 'id'=):
-  
+
 app/controllers/tags_controller.rb:66:in `set_tag'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -4716,9 +4716,9 @@ Processing by TagsController#show as HTML
 Completed 404 Not Found in 6ms (ActiveRecord: 0.4ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Tag with 'id'=iOS):
-  
+
 app/controllers/tags_controller.rb:66:in `set_tag'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -4735,9 +4735,9 @@ Processing by TagsController#show as HTML
 Completed 404 Not Found in 6ms (ActiveRecord: 0.2ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Tag with 'id'=):
-  
+
 app/controllers/tags_controller.rb:66:in `set_tag'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -4753,9 +4753,9 @@ Processing by TagsController#show as HTML
 Completed 400 Bad Request in 4ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionController::ParameterMissing (param is missing or the value is empty: tag):
-  
+
 app/controllers/tags_controller.rb:71:in `tag_params'
 app/controllers/tags_controller.rb:66:in `set_tag'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -4830,9 +4830,9 @@ Processing by TagsController#show as HTML
 Completed 404 Not Found in 5ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Tag with 'id'=backend):
-  
+
 app/controllers/tags_controller.rb:66:in `set_tag'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -4849,9 +4849,9 @@ Processing by TagsController#show as HTML
 Completed 404 Not Found in 11ms (ActiveRecord: 4.6ms)
 
 
-  
+
 ActiveRecord::RecordNotFound (Couldn't find Tag with 'id'=backend):
-  
+
 app/controllers/tags_controller.rb:66:in `set_tag'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -4936,9 +4936,9 @@ Completed 200 OK in 140ms (Views: 121.6ms | ActiveRecord: 7.9ms)
 
 
 Started GET "/tag_user/backend" for ::1 at 2017-01-08 18:47:33 -0800
-  
+
 ActionController::RoutingError (No route matches [GET] "/tag_user/backend"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -5289,16 +5289,16 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `tag_list' for nil:NilClass):
-    12: 
+    12:
     13:     </section>
     14:     <div class="posts">
     15:         <p>Tags: <%= raw @user.tag_list.map { |t| link_to t, tag_user_path(t) }.join(', ') %></p>
     16:       <% @users.each do |user| %>
     17:           <article>
     18:             <%= link_to user do %>
-  
+
 app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb__4331146917552539605_70230202415840'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -5317,16 +5317,16 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
     11:       <% end %>
-    12: 
+    12:
     13:     </section>
     14:     <% @tags.each do |tag| %>
     15:       <tr>
     16:         <td><%= tag.name %></td>
     17:         <p>Tags: <%= raw tag.map { |t| link_to t, tag_user_path(t) }.join(', ') %></p>
-  
+
 app/views/users/index.html.erb:14:in `_app_views_users_index_html_erb__4331146917552539605_70230206050220'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -5346,20 +5346,20 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 286ms (ActiveRecord: 1.5ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `user' for #<#<Class:0x007fbf868881d0>:0x007fbf85534d68>
 Did you mean?  user_url
                user_path
                users_url
                @users):
-    12: 
+    12:
     13:     </section>
     14:     <div class="posts">
     15:         <p>Tags: <%= raw user.tag_list.map { |t| link_to t, tag_user_path(t) }.join(', ') %></p>
     16:       <% @users.each do |user| %>
     17:           <article>
     18:             <%= link_to user do %>
-  
+
 app/views/users/index.html.erb:15:in `_app_views_users_index_html_erb__4331146917552539605_70230276156320'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -5499,7 +5499,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 31ms (ActiveRecord: 7.2ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `map' for #<Class:0x007fbf87253048>
 Did you mean?  tap):
      6:     <section id="search" class="alt">
@@ -5509,7 +5509,7 @@ Did you mean?  tap):
     10:         <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
     11:         <%= submit_tag "Search", :name => nil, :style => "float:left;"%>
     12:       <% end %>
-  
+
 app/views/users/index.html.erb:9:in `block in _app_views_users_index_html_erb__4331146917552539605_70230204237860'
 app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb__4331146917552539605_70230204237860'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -5530,7 +5530,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 353ms (ActiveRecord: 1.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `tag_list' for #<#<Class:0x007fbf868881d0>:0x007fbf7cd34328>
 Did you mean?  tag_options):
      6:     <section id="search" class="alt">
@@ -5540,7 +5540,7 @@ Did you mean?  tag_options):
     10:         <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
     11:         <%= submit_tag "Search", :name => nil, :style => "float:left;"%>
     12:       <% end %>
-  
+
 app/views/users/index.html.erb:9:in `block in _app_views_users_index_html_erb__4331146917552539605_70230204851960'
 app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb__4331146917552539605_70230204851960'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -5687,7 +5687,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.6ms)
 
 
-  
+
 ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
      7:       <%= form_tag users_path, :method => 'get' do %>
      8:         <%= collection_check_boxes :options, :tag_ids, Tag.order(:name), :id, :name, {multiple: true}%>
@@ -5695,8 +5695,8 @@ ActionView::Template::Error (wrong number of arguments (given 1, expected 0)):
     10:         <p>Tags: <%= Tag.all(1).name %></p>
     11:         <%= submit_tag "Search", :name => nil, :style => "float:left;"%>
     12:       <% end %>
-    13: 
-  
+    13:
+
 app/views/users/index.html.erb:10:in `block in _app_views_users_index_html_erb__4331146917552539605_70230246148740'
 app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb__4331146917552539605_70230246148740'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -5795,7 +5795,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 22ms (ActiveRecord: 2.5ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for "iOS":String):
     12:       <%= form_tag users_path, :method => 'get' do %>
     13:         <%= collection_check_boxes :options, :tag_ids, Tag.order(:name), :id, :name, {multiple: true}%>
@@ -5803,8 +5803,8 @@ ActionView::Template::Error (undefined method `name' for "iOS":String):
     15:         <p>Tags: <%= link_to tag_array[1].name, tag_user_path(tag_array[2].name) %></p>
     16:         <%= submit_tag "Search", :name => nil, :style => "float:left;"%>
     17:       <% end %>
-    18: 
-  
+    18:
+
 app/views/users/index.html.erb:15:in `block in _app_views_users_index_html_erb__4331146917552539605_70230277137020'
 app/views/users/index.html.erb:12:in `_app_views_users_index_html_erb__4331146917552539605_70230277137020'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -5919,12 +5919,12 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 43ms (ActiveRecord: 1.0ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
 ...bel(:"data-value" => b.text)) } );@output_buffer.safe_append...
 ...                               ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;         end 
+'.freeze;         end
                      ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:19: syntax error, unexpected tSTRING_DEND, expecting '}'
 ...| link_to t, tag_user_path(t) }.join(', ') );@output_buffer....
@@ -5933,11 +5933,11 @@ SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/
 ...tag_user_path(t) }.join(', ') );@output_buffer.safe_append='...
 ...                               ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:21: syntax error, unexpected keyword_end, expecting '}'
-'.freeze;       end 
+'.freeze;       end
                    ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:44: syntax error, unexpected keyword_ensure, expecting '}'
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:46: syntax error, unexpected keyword_end, expecting '}'):
-  
+
 app/views/users/index.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
 app/views/users/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
 app/views/users/index.html.erb:19: syntax error, unexpected tSTRING_DEND, expecting '}'
@@ -5963,12 +5963,12 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.6ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
 ...label, tag_user_path(b.label) } );@output_buffer.safe_append...
 ...                               ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;         end 
+'.freeze;         end
                      ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:19: syntax error, unexpected tSTRING_DEND, expecting '}'
 ...| link_to t, tag_user_path(t) }.join(', ') );@output_buffer....
@@ -5977,11 +5977,11 @@ SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/
 ...tag_user_path(t) }.join(', ') );@output_buffer.safe_append='...
 ...                               ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:21: syntax error, unexpected keyword_end, expecting '}'
-'.freeze;       end 
+'.freeze;       end
                    ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:44: syntax error, unexpected keyword_ensure, expecting '}'
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:46: syntax error, unexpected keyword_end, expecting '}'):
-  
+
 app/views/users/index.html.erb:16: syntax error, unexpected tSTRING_DEND, expecting ')'
 app/views/users/index.html.erb:17: syntax error, unexpected keyword_end, expecting ')'
 app/views/users/index.html.erb:19: syntax error, unexpected tSTRING_DEND, expecting '}'
@@ -6146,7 +6146,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 112ms (ActiveRecord: 3.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for #<ActionView::Helpers::Tags::CollectionCheckBoxes::CheckBoxBuilder:0x007fbf7d721778>):
     13:       <%= form_tag users_path, :method => 'get' do %>
     14:         <%= collection_check_boxes :options, :tag_ids, Tag.order(:name), :id, :name, {multiple: true}%>
@@ -6155,7 +6155,7 @@ ActionView::Template::Error (undefined method `name' for #<ActionView::Helpers::
     17:         <% end %>
     18:         <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
     19:         <p>Tags: <%= raw tag_array.map { |t| link_to t, tag_user_path(t) }.join(', ') %></p>
-  
+
 app/views/users/index.html.erb:16:in `block (2 levels) in _app_views_users_index_html_erb__4331146917552539605_70230288777760'
 app/views/users/index.html.erb:15:in `block in _app_views_users_index_html_erb__4331146917552539605_70230288777760'
 app/views/users/index.html.erb:13:in `_app_views_users_index_html_erb__4331146917552539605_70230288777760'
@@ -6507,7 +6507,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 18ms (ActiveRecord: 1.2ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:16: syntax error, unexpected =>, expecting ')'
 ...end=( b.label((:"data-value" => b.value) { b.check_box + b.t...
 ...                               ^
@@ -6518,14 +6518,14 @@ SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/
 ....value) { b.check_box + b.text} );@output_buffer.safe_append...
 ...                               ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:19: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;         end 
+'.freeze;         end
                      ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:23: syntax error, unexpected keyword_end, expecting ')'
-'.freeze;       end 
+'.freeze;       end
                    ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:46: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:48: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/users/index.html.erb:16: syntax error, unexpected =>, expecting ')'
 app/views/users/index.html.erb:16: syntax error, unexpected '{', expecting ')'
 app/views/users/index.html.erb:16: syntax error, unexpected '}', expecting ')'
@@ -6596,11 +6596,11 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.1ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:16: syntax error, unexpected tLABEL, expecting '='
 ... { b.check_box, include_hidden: false } );@output_buffer.saf...
 ...                               ^):
-  
+
 app/views/users/index.html.erb:16: syntax error, unexpected tLABEL, expecting '='
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -6856,9 +6856,9 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.9ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:47: syntax error, unexpected keyword_ensure, expecting end-of-input):
-  
+
 app/views/users/index.html.erb:47: syntax error, unexpected keyword_ensure, expecting end-of-input
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -7423,7 +7423,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.0ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
 ...ck_box {b.check_box + link_to b.text, tag_user_path(b.text)}...
 ...                               ^
@@ -7431,14 +7431,14 @@ SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/
 ... b.text, tag_user_path(b.text)} );@output_buffer.safe_append...
 ...                               ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:20: syntax error, unexpected keyword_end, expecting '}'
-'.freeze;         end 
+'.freeze;         end
                      ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:23: syntax error, unexpected keyword_end, expecting '}'
-'.freeze;       end 
+'.freeze;       end
                    ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:46: syntax error, unexpected keyword_ensure, expecting '}'
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:48: syntax error, unexpected keyword_end, expecting '}'):
-  
+
 app/views/users/index.html.erb:16: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
 app/views/users/index.html.erb:16: syntax error, unexpected '}', expecting &. or :: or '[' or '.'
 app/views/users/index.html.erb:20: syntax error, unexpected keyword_end, expecting '}'
@@ -7469,9 +7469,9 @@ Completed 200 OK in 120ms (Views: 111.9ms | ActiveRecord: 2.7ms)
 
 
 Started GET "/tag" for ::1 at 2017-01-08 20:25:25 -0800
-  
+
 ActionController::RoutingError (No route matches [GET] "/tag"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -8134,16 +8134,16 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 1752ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActionView::Template::Error (Undefined mixin 'breakpoint'.):
     4:     <title>Coffeealum</title>
     5:     <%= csrf_meta_tags %>
-    6: 
+    6:
     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     9:   </head>
-   10: 
-  
+   10:
+
 app/assets/stylesheets/base/_page.scss:23:in `breakpoint'
 app/assets/stylesheets/base/_page.scss:23
 app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___301836386486963704_70200592105540'
@@ -8785,7 +8785,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.0ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:13: syntax error, unexpected '<'
 ...reeze;@output_buffer.append=( <div class="tag"><p class="bg-...
 ...                               ^
@@ -8799,7 +8799,7 @@ SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:14: syntax error, unexpected keyword_end, expecting ')'
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:35: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:37: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/users/show.html.erb:13: syntax error, unexpected '<'
 app/views/users/show.html.erb:13: syntax error, unexpected '<'
 app/views/users/show.html.erb:13: unknown regexp options - dv
@@ -8825,7 +8825,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.7ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
      6:         <p><%= @user.role %></p>
      7:         <p><%= @user.title %></p>
@@ -8834,7 +8834,7 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass):
     10:             <% tag_array.append(tag.name) %>
     11:         <% end %>
     12:         <% tag_array.each do |tag| %>
-  
+
 app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb__3980950961968870752_70200591850080'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -8854,7 +8854,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.9ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
      6:         <p><%= @user.role %></p>
      7:         <p><%= @user.title %></p>
@@ -8863,7 +8863,7 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass):
     10:             <% tag_array.append(tag.name) %>
     11:         <% end %>
     12:         <% tag_array.each do |tag| %>
-  
+
 app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb__3980950961968870752_70200521947240'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -8883,7 +8883,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `each' for nil:NilClass):
      6:         <p><%= @user.role %></p>
      7:         <p><%= @user.title %></p>
@@ -8892,7 +8892,7 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass):
     10:             <% tag_array.append(tag.name) %>
     11:         <% end %>
     12:         <% tag_array.each do |tag| %>
-  
+
 app/views/users/show.html.erb:9:in `_app_views_users_show_html_erb__3980950961968870752_70200614067700'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -9284,7 +9284,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 508ms (ActiveRecord: 4.1ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `edit' for #<#<Class:0x007fb1b721bc20>:0x007fb1b3c1a810>
 Did you mean?  edit_tag_url
                edit_tag_path
@@ -9298,7 +9298,7 @@ Did you mean?  edit_tag_url
     7:         <p><%= @user.role %></p>
     8:         <p><%= @user.title %></p>
     9:         <% tag_array = Array.new %>
-  
+
 app/views/users/show.html.erb:6:in `_app_views_users_show_html_erb__3980950961968870752_70200600877380'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -9476,13 +9476,13 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.4ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:38: syntax error, unexpected ')', expecting =>
 ...n big", edit_user_path(@user) );@output_buffer.safe_append='
 ...                               ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:43: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/users/show.html.erb:38: syntax error, unexpected ')', expecting =>
 app/views/users/show.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
 app/views/users/show.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
@@ -9624,13 +9624,13 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.9ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:38: syntax error, unexpected ')', expecting =>
 ...ttps://#{@user.linkedin_url}" );@output_buffer.safe_append='
 ...                               ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:43: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/users/show.html.erb:38: syntax error, unexpected ')', expecting =>
 app/views/users/show.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
 app/views/users/show.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
@@ -9700,11 +9700,11 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.9ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:37: syntax error, unexpected ',', expecting =>
 ...https://#{@user.linkedin_url}", target: '_blank' );@output_b...
 ...                               ^):
-  
+
 app/views/users/show.html.erb:37: syntax error, unexpected ',', expecting =>
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -9724,13 +9724,13 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.7ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:37: syntax error, unexpected ')'
 ...class: "button big linkedin", );@output_buffer.safe_append='
 ...                               ^
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/show.html.erb:43: syntax error, unexpected keyword_end, expecting ')'):
-  
+
 app/views/users/show.html.erb:37: syntax error, unexpected ')'
 app/views/users/show.html.erb:41: syntax error, unexpected keyword_ensure, expecting ')'
 app/views/users/show.html.erb:43: syntax error, unexpected keyword_end, expecting ')'
@@ -9961,17 +9961,17 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 342ms (ActiveRecord: 2.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `tag_array' for #<#<Class:0x007fb1b721bc20>:0x007fb1b2b526e0>
 Did you mean?  tag_array):
     4: <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
     5: <%= submit_tag "Search", :name => nil, :style => "float:left;"%>
-    6: 
+    6:
     7: <% tag_array.each do |tag| %>
     8:    <div class="tag-thin-gap"><p class="blue"><%= link_to tag, tag_user_path(tag) %></p></div>
     9: <%end%>
    10: </section>
-  
+
 app/views/users/index.html.erb:7:in `_app_views_users_index_html_erb__3960379098034334759_70200592079420'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -10395,7 +10395,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 41ms (ActiveRecord: 3.3ms)
 
 
-  
+
 ActionView::Template::Error (First argument in form cannot contain nil or be empty):
     25:               <header class="major">
     26:                 <h2>Users</h2>
@@ -10404,7 +10404,7 @@ ActionView::Template::Error (First argument in form cannot contain nil or be emp
     29:               <p>
     30:                 <%= f.text_field :search, params[:search], :placeholder => "Search", :id => "query" %>
     31:                 <%= f.submit :name => nil%>
-  
+
 app/views/users/index.html.erb:28:in `_app_views_users_index_html_erb__3960379098034334759_70200628904840'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -10423,7 +10423,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.5ms)
 
 
-  
+
 ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
     25:               <header class="major">
     26:                 <h2>Users</h2>
@@ -10432,7 +10432,7 @@ ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2))
     29:               <p>
     30:                 <%= f.text_field :search, params[:search], :placeholder => "Search", :id => "query" %>
     31:                 <%= f.submit :name => nil%>
-  
+
 app/views/users/index.html.erb:28:in `_app_views_users_index_html_erb__3960379098034334759_70200581864880'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -10452,7 +10452,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 21ms (ActiveRecord: 1.3ms)
 
 
-  
+
 ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2)):
     27:               </header>
     28:               <%= form_for(@users.first) do |f| %>
@@ -10461,7 +10461,7 @@ ActionView::Template::Error (wrong number of arguments (given 3, expected 1..2))
     31:                 <%= f.submit :name => nil%>
     32:               </p>
     33:              <% end %>
-  
+
 app/views/users/index.html.erb:30:in `block in _app_views_users_index_html_erb__3960379098034334759_70200534865780'
 app/views/users/index.html.erb:28:in `_app_views_users_index_html_erb__3960379098034334759_70200534865780'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -10482,7 +10482,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `search' for #<User:0x007fb1b3f63af8>):
     27:               </header>
     28:               <%= form_for(@users.first) do |f| %>
@@ -10491,7 +10491,7 @@ ActionView::Template::Error (undefined method `search' for #<User:0x007fb1b3f63a
     31:                 <%= f.submit :name => nil%>
     32:               </p>
     33:              <% end %>
-  
+
 app/views/users/index.html.erb:30:in `block in _app_views_users_index_html_erb__3960379098034334759_70200619560660'
 app/views/users/index.html.erb:28:in `_app_views_users_index_html_erb__3960379098034334759_70200619560660'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -10512,7 +10512,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 80ms (ActiveRecord: 2.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `{:placeholder=>"Search", :id=>"query"}' for #<User:0x007fb1b5bb93d8>):
     27:               </header>
     28:               <%= form_for(@users.first) do |f| %>
@@ -10521,7 +10521,7 @@ ActionView::Template::Error (undefined method `{:placeholder=>"Search", :id=>"qu
     31:                 <%= f.submit :name => nil%>
     32:               </p>
     33:              <% end %>
-  
+
 app/views/users/index.html.erb:30:in `block in _app_views_users_index_html_erb__3960379098034334759_70200635849420'
 app/views/users/index.html.erb:28:in `_app_views_users_index_html_erb__3960379098034334759_70200635849420'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -10610,9 +10610,9 @@ Completed 200 OK in 163ms (Views: 157.4ms | ActiveRecord: 1.5ms)
 
 
 Started POST "/users?id=search-form&method=get" for ::1 at 2017-01-09 17:47:36 -0800
-  
+
 ActionController::RoutingError (No route matches [POST] "/users"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -10648,9 +10648,9 @@ puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (128.8ms)
 Started POST "/users?id=search-form&method=get" for ::1 at 2017-01-09 17:48:01 -0800
-  
+
 ActionController::RoutingError (No route matches [POST] "/users"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -10686,9 +10686,9 @@ puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (114.8ms)
 Started POST "/users?id=search-form&method=get" for ::1 at 2017-01-09 17:48:04 -0800
-  
+
 ActionController::RoutingError (No route matches [POST] "/users"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -10735,9 +10735,9 @@ Completed 200 OK in 158ms (Views: 153.3ms | ActiveRecord: 1.7ms)
 
 
 Started POST "/users" for ::1 at 2017-01-09 17:48:20 -0800
-  
+
 ActionController::RoutingError (No route matches [POST] "/users"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -13068,16 +13068,16 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 1810ms (ActiveRecord: 2.0ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "    float: right": expected "{", was ";"):
     4:     <title>Coffeealum</title>
     5:     <%= csrf_meta_tags %>
-    6: 
+    6:
     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     9:   </head>
-   10: 
-  
+   10:
+
 app/assets/stylesheets/profile.scss:64
 app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1479031151362438759_70235626281700'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -13098,16 +13098,16 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 66ms (ActiveRecord: 1.3ms)
 
 
-  
+
 ActionView::Template::Error (Invalid CSS after "    float: right": expected "{", was ";"):
     4:     <title>Coffeealum</title>
     5:     <%= csrf_meta_tags %>
-    6: 
+    6:
     7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     9:   </head>
-   10: 
-  
+   10:
+
 app/assets/stylesheets/profile.scss:64
 app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1479031151362438759_70235656684120'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -13603,7 +13603,7 @@ Processing by UsersController#show as HTML
 Completed 500 Internal Server Error in 36ms (ActiveRecord: 2.8ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `name' for "backend":String):
     15:         <p><%= @user.title %></p>
     16:         <% tag_array = Array.new %>
@@ -13612,7 +13612,7 @@ ActionView::Template::Error (undefined method `name' for "backend":String):
     19:         <% end %>
     20:         <% tag_array.each do |tag| %>
     21:              <div class="tag"><p class="blue"><%= tag %></p></div>
-  
+
 app/views/users/show.html.erb:18:in `block in _app_views_users_show_html_erb__1886898363402161395_70235559743380'
 app/views/users/show.html.erb:17:in `each'
 app/views/users/show.html.erb:17:in `_app_views_users_show_html_erb__1886898363402161395_70235559743380'
@@ -13737,7 +13737,7 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 19ms (ActiveRecord: 1.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `tag_list' for nil:NilClass):
     42:                         <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
     43:                         <p><%= user.title %></p>
@@ -13746,7 +13746,7 @@ ActionView::Template::Error (undefined method `tag_list' for nil:NilClass):
     46:                             <% tag_array_select.append(tag) %>
     47:                         <% end %>
     48:                         <div class="tag-index">
-  
+
 app/views/users/index.html.erb:45:in `block (2 levels) in _app_views_users_index_html_erb__2708681863568716772_70235625245920'
 app/views/users/index.html.erb:37:in `block in _app_views_users_index_html_erb__2708681863568716772_70235625245920'
 app/views/users/index.html.erb:35:in `_app_views_users_index_html_erb__2708681863568716772_70235625245920'
@@ -14111,12 +14111,12 @@ Completed 200 OK in 95ms (Views: 92.2ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/" for ::1 at 2017-01-10 09:21:47 -0800
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -14176,12 +14176,12 @@ puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.6ms)
 Started GET "/" for ::1 at 2017-01-10 09:22:16 -0800
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -14241,12 +14241,12 @@ puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (74.5ms)
 Started GET "/" for ::1 at 2017-01-10 09:23:25 -0800
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -14306,12 +14306,12 @@ puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (71.8ms)
 Started GET "/" for ::1 at 2017-01-10 09:24:31 -0800
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `initialize'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `new'
 activerecord (5.0.1) lib/active_record/connection_adapters/postgresql_adapter.rb:671:in `connect'
@@ -16374,16 +16374,16 @@ Processing by TagsController#new as HTML
 Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `position' for #<Tag:0x007ffa6a4c76d0>):
-    18: 
+    18:
     19:   <div class="field">
     20:     <%= f.label :position %>
     21:     <%= f.text_field :position %>
     22:   </div>
-    23: 
+    23:
     24:   <div class="actions">
-  
+
 app/views/tags/_form.html.erb:21:in `block in _app_views_tags__form_html_erb__1527806629913828496_70356821317200'
 app/views/tags/_form.html.erb:1:in `_app_views_tags__form_html_erb__1527806629913828496_70356821317200'
 app/views/tags/new.html.erb:3:in `_app_views_tags_new_html_erb___1725605035430162898_70356750970760'
@@ -16403,16 +16403,16 @@ Processing by TagsController#new as HTML
 Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `position' for #<Tag:0x007ffa6f414030>):
-    18: 
+    18:
     19:   <div class="field">
     20:     <%= f.label :position %>
     21:     <%= f.text_field :position %>
     22:   </div>
-    23: 
+    23:
     24:   <div class="actions">
-  
+
 app/views/tags/_form.html.erb:21:in `block in _app_views_tags__form_html_erb__1527806629913828496_70356791603640'
 app/views/tags/_form.html.erb:1:in `_app_views_tags__form_html_erb__1527806629913828496_70356791603640'
 app/views/tags/new.html.erb:3:in `_app_views_tags_new_html_erb___1725605035430162898_70356791733780'
@@ -16450,16 +16450,16 @@ Processing by TagsController#new as HTML
 Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `position' for #<Tag:0x007ffa72e34b48>):
-    18: 
+    18:
     19:   <div class="field">
     20:     <%= f.label :position %>
     21:     <%= f.text_field :position %>
     22:   </div>
-    23: 
+    23:
     24:   <div class="actions">
-  
+
 app/views/tags/_form.html.erb:21:in `block in _app_views_tags__form_html_erb__1527806629913828496_70356822839360'
 app/views/tags/_form.html.erb:1:in `_app_views_tags__form_html_erb__1527806629913828496_70356822839360'
 app/views/tags/new.html.erb:3:in `_app_views_tags_new_html_erb___1725605035430162898_70356822995980'
@@ -16489,16 +16489,16 @@ Processing by TagsController#new as HTML
 Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `position' for #<Tag:0x007ffa6dccabe0>):
-    18: 
+    18:
     19:   <div class="field">
     20:     <%= f.label :position %>
     21:     <%= f.text_field :position %>
     22:   </div>
-    23: 
+    23:
     24:   <div class="actions">
-  
+
 app/views/tags/_form.html.erb:21:in `block in _app_views_tags__form_html_erb__1527806629913828496_70356780168420'
 app/views/tags/_form.html.erb:1:in `_app_views_tags__form_html_erb__1527806629913828496_70356780168420'
 app/views/tags/new.html.erb:3:in `_app_views_tags_new_html_erb___1725605035430162898_70356780300680'
@@ -16518,16 +16518,16 @@ Processing by TagsController#new as HTML
 Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `position' for #<Tag:0x007ffa728c9618>):
-    18: 
+    18:
     19:   <div class="field">
     20:     <%= f.label :position %>
     21:     <%= f.text_field :position %>
     22:   </div>
-    23: 
+    23:
     24:   <div class="actions">
-  
+
 app/views/tags/_form.html.erb:21:in `block in _app_views_tags__form_html_erb__1527806629913828496_70356796422980'
 app/views/tags/_form.html.erb:1:in `_app_views_tags__form_html_erb__1527806629913828496_70356796422980'
 app/views/tags/new.html.erb:3:in `_app_views_tags_new_html_erb___1725605035430162898_70356814831180'
@@ -16547,19 +16547,19 @@ Processing by TagsController#new as HTML
 Completed 500 Internal Server Error in 112ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `text' for #<ActionView::Helpers::FormBuilder:0x007ffa6b1c6f70>
 Did you mean?  text_area
                text_field
                test):
-    18: 
+    18:
     19:   <div class="field">
     20:     <%= f.label :position %>
     21:     <%= f.text :position %>
     22:   </div>
-    23: 
+    23:
     24:   <div class="actions">
-  
+
 app/views/tags/_form.html.erb:21:in `block in _app_views_tags__form_html_erb__1527806629913828496_70356796843320'
 app/views/tags/_form.html.erb:1:in `_app_views_tags__form_html_erb__1527806629913828496_70356796843320'
 app/views/tags/new.html.erb:3:in `_app_views_tags_new_html_erb___1725605035430162898_70356749286680'
@@ -16579,16 +16579,16 @@ Processing by TagsController#new as HTML
 Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `position' for #<Tag:0x007ffa71d605b0>):
-    18: 
+    18:
     19:   <div class="field">
     20:     <%= f.label :position %>
     21:     <%= f.text_field :position %>
     22:   </div>
-    23: 
+    23:
     24:   <div class="actions">
-  
+
 app/views/tags/_form.html.erb:21:in `block in _app_views_tags__form_html_erb__1527806629913828496_70356749968940'
 app/views/tags/_form.html.erb:1:in `_app_views_tags__form_html_erb__1527806629913828496_70356749968940'
 app/views/tags/new.html.erb:3:in `_app_views_tags_new_html_erb___1725605035430162898_70356815157140'
@@ -16618,16 +16618,16 @@ Processing by TagsController#new as HTML
 Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `position' for #<Tag:0x007ffa6f9ea518>):
-    18: 
+    18:
     19:   <div class="field">
     20:     <%= f.label :position %>
     21:     <%= f.text_field :position %>
     22:   </div>
-    23: 
+    23:
     24:   <div class="actions">
-  
+
 app/views/tags/_form.html.erb:21:in `block in _app_views_tags__form_html_erb__1527806629913828496_70356795478480'
 app/views/tags/_form.html.erb:1:in `_app_views_tags__form_html_erb__1527806629913828496_70356795478480'
 app/views/tags/new.html.erb:3:in `_app_views_tags_new_html_erb___1725605035430162898_70356795577860'
@@ -16687,16 +16687,16 @@ Processing by TagsController#new as HTML
 Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `position' for #<Tag:0x007ffa71b25ac0>):
-    18: 
+    18:
     19:   <div class="field">
     20:     <%= f.label :position %>
     21:     <%= f.text_field :position %>
     22:   </div>
-    23: 
+    23:
     24:   <div class="actions">
-  
+
 app/views/tags/_form.html.erb:21:in `block in _app_views_tags__form_html_erb__1527806629913828496_70356758597560'
 app/views/tags/_form.html.erb:1:in `_app_views_tags__form_html_erb__1527806629913828496_70356758597560'
 app/views/tags/new.html.erb:3:in `_app_views_tags_new_html_erb___1725605035430162898_70356813029940'
@@ -17405,16 +17405,16 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 216ms (ActiveRecord: 18.8ms)
 
 
-  
+
 ActionView::Template::Error (uninitialized constant ApplicationHelper::APP_CONFIG):
-     6: 
+     6:
      7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
      9:     <title><%= title %></title>
     10:   </head>
-    11: 
+    11:
     12:   <body>
-  
+
 app/helpers/application_helper.rb:6:in `title'
 app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb__4508903444932011931_70358175177060'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -17801,16 +17801,16 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 459ms (ActiveRecord: 26.0ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `title' for #<#<Class:0x007fa3a66796b0>:0x007fa3a6678440>):
-     6: 
+     6:
      7:     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
      8:     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
      9:     <!-- <title><%= title %></title> -->
     10:   </head>
-    11: 
+    11:
     12:   <body>
-  
+
 app/views/layouts/application.html.erb:9:in `_app_views_layouts_application_html_erb___358432729941109946_70170424117020'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -17852,10 +17852,10 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 68ms (ActiveRecord: 2.4ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:94: syntax error, unexpected keyword_ensure, expecting keyword_end
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:96: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/users/index.html.erb:94: syntax error, unexpected keyword_ensure, expecting keyword_end
 app/views/users/index.html.erb:96: syntax error, unexpected end-of-input, expecting keyword_end
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -18270,7 +18270,7 @@ Completed 200 OK in 168ms (Views: 137.9ms | ActiveRecord: 16.2ms)
 
 
 Started GET "/users" for ::1 at 2017-01-11 16:26:40 -0800
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/helpers/users_helper.rb:2: syntax error, unexpected '<', expecting keyword_end
     <% tag_array = Array.new %>
      ^
@@ -18310,7 +18310,7 @@ SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/helpers/users_helper.rb:17: syntax error, unexpected '>'
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/helpers/users_helper.rb:18: syntax error, unexpected '>'
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/helpers/users_helper.rb:19: syntax error, unexpected '>'):
-  
+
 app/helpers/users_helper.rb:2: syntax error, unexpected '<', expecting keyword_end
 app/helpers/users_helper.rb:2: syntax error, unexpected '=', expecting keyword_end
 app/helpers/users_helper.rb:4: syntax error, unexpected '<', expecting keyword_end
@@ -18401,11 +18401,11 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 11ms (ActiveRecord: 3.3ms)
 
 
-  
+
 ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_tags_on_name"
 DETAIL:  Key (name)=(code review) already exists.
 : INSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"):
-  
+
 app/controllers/users_controller.rb:8:in `index'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -18461,11 +18461,11 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 78ms (ActiveRecord: 15.8ms)
 
 
-  
+
 ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_tags_on_name"
 DETAIL:  Key (name)=(code review) already exists.
 : INSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"):
-  
+
 app/controllers/users_controller.rb:8:in `index'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -18536,11 +18536,11 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 7ms (ActiveRecord: 2.0ms)
 
 
-  
+
 ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_tags_on_name"
 DETAIL:  Key (name)=(code review) already exists.
 : INSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"):
-  
+
 app/controllers/users_controller.rb:8:in `index'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -18564,18 +18564,18 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 50ms (ActiveRecord: 11.8ms)
 
 
-  
+
 ActionView::Template::Error (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "index_tags_on_name"
 DETAIL:  Key (name)=(code review) already exists.
 : INSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"):
     19:     <% end %>
     20: <% end %>
-    21: 
+    21:
     22: <% tag_code_review = Tag.create(name: "code review") %>
     23: <% tag_design = Tag.create(name: "design help")%>
     24: <% tag_interview = Tag.create(name: "interview prep")%>
     25: <% tag_quality_assurance = Tag.create(name: "quality assurance")%>
-  
+
 app/views/users/index.html.erb:22:in `_app_views_users_index_html_erb__2052544567864924414_70170459573340'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -18675,16 +18675,16 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 276ms (ActiveRecord: 1.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `tag_code_review' for #<#<Class:0x007fa3aaa20dc8>:0x007fa3aabb5800>):
     20: <% end %>
-    21: 
-    22: 
+    21:
+    22:
     23: <% tag_array += [tag_code_review.name, tag_design.name, tag_interview.name, tag_quality_assurance.name, tag_general_mentorship.name] %>
-    24: 
-    25: 
+    24:
+    25:
     26: <div class="container">
-  
+
 app/views/users/index.html.erb:23:in `_app_views_users_index_html_erb__2052544567864924414_70170460402320'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -18704,16 +18704,16 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 216ms (ActiveRecord: 1.4ms)
 
 
-  
+
 ActionView::Template::Error (undefined local variable or method `tag_code_review' for #<#<Class:0x007fa3aaa20dc8>:0x007fa3a2ce9490>):
     20: <% end %>
-    21: 
-    22: 
+    21:
+    22:
     23: <!-- <% tag_array += [tag_code_review.name, tag_design.name, tag_interview.name, tag_quality_assurance.name, tag_general_mentorship.name] %> -->
-    24: 
-    25: 
+    24:
+    25:
     26: <div class="container">
-  
+
 app/views/users/index.html.erb:23:in `_app_views_users_index_html_erb__2052544567864924414_70170393955720'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
@@ -18832,10 +18832,10 @@ Processing by UsersController#index as HTML
 Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.5ms)
 
 
-  
+
 SyntaxError (/Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:102: syntax error, unexpected keyword_ensure, expecting keyword_end
 /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/views/users/index.html.erb:104: syntax error, unexpected end-of-input, expecting keyword_end):
-  
+
 app/views/users/index.html.erb:102: syntax error, unexpected keyword_ensure, expecting keyword_end
 app/views/users/index.html.erb:104: syntax error, unexpected end-of-input, expecting keyword_end
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
@@ -20111,18 +20111,18 @@ Processing by UsersController#edit as HTML
 Completed 500 Internal Server Error in 135ms (ActiveRecord: 2.3ms)
 
 
-  
+
 ActionView::Template::Error (undefined method `edit_user_password' for #<#<Class:0x007fbb3c9e5e40>:0x007fbb4151ad70>
 Did you mean?  edit_user_password_url
                edit_user_password_path):
-    62: 
+    62:
     63:     <div class="actions contact">
     64:       <%= f.submit %>
     65:        <%= link_to "Create New Password",  edit_user_password(f), target: '_blank', class: "button " %>
     66:     </div>
     67:   <% end %>
     68: </div>
-  
+
 app/views/users/edit.html.erb:65:in `block in _app_views_users_edit_html_erb__1353916838877725396_70221115743220'
 app/views/users/edit.html.erb:10:in `_app_views_users_edit_html_erb__1353916838877725396_70221115743220'
   Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
@@ -20147,7 +20147,7 @@ Completed 200 OK in 110ms (Views: 101.3ms | ActiveRecord: 2.4ms)
 
 
 Started GET "/u/password/edit.%23%3CActionView::Helpers::FormBuilder:0x007fbb3dc2b8c0%3E" for ::1 at 2017-01-13 10:56:55 -0800
-Processing by Devise::PasswordsController#edit as 
+Processing by Devise::PasswordsController#edit as
 Redirected to http://localhost:3000/u/sign_in
 Filter chain halted as :assert_reset_token_passed rendered or redirected
 Completed 302 Found in 6ms (ActiveRecord: 0.0ms)
@@ -20211,7 +20211,7 @@ Completed 200 OK in 152ms (Views: 140.5ms | ActiveRecord: 3.5ms)
 
 
 Started GET "/u/password/edit.%23%3CActionView::Helpers::FormBuilder:0x007fbb3d62fde0%3E" for ::1 at 2017-01-13 10:57:07 -0800
-Processing by Devise::PasswordsController#edit as 
+Processing by Devise::PasswordsController#edit as
 Redirected to http://localhost:3000/u/sign_in
 Filter chain halted as :assert_reset_token_passed rendered or redirected
 Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
@@ -21067,9 +21067,9 @@ Completed 200 OK in 277ms (Views: 122.5ms | ActiveRecord: 0.6ms)
   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
 Started GET "/u" for ::1 at 2017-01-13 13:08:59 -0800
-  
+
 ActionController::RoutingError (No route matches [GET] "/u"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -22458,9 +22458,9 @@ Content-Transfer-Encoding: 7bit
 Completed 500 Internal Server Error in 30343ms (ActiveRecord: 9.3ms)
 
 
-  
+
 Net::OpenTimeout (execution expired):
-  
+
 /usr/local/Cellar/ruby/2.3.1/lib/ruby/2.3.0/net/smtp.rb:542:in `initialize'
 /usr/local/Cellar/ruby/2.3.1/lib/ruby/2.3.0/net/smtp.rb:542:in `open'
 /usr/local/Cellar/ruby/2.3.1/lib/ruby/2.3.0/net/smtp.rb:542:in `tcp_socket'
@@ -22866,9 +22866,9 @@ Completed 200 OK in 2371ms (Views: 2329.4ms | ActiveRecord: 26.8ms)
 
 
 Started GET "/images/logo.png" for ::1 at 2017-01-14 12:17:37 -0800
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/logo.png"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -22923,9 +22923,9 @@ Completed 200 OK in 204ms (Views: 201.3ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/images/logo.png" for ::1 at 2017-01-14 12:17:43 -0800
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/logo.png"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -22975,9 +22975,9 @@ Completed 200 OK in 267ms (Views: 262.6ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/images/logo.png" for ::1 at 2017-01-14 12:17:46 -0800
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/logo.png"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -23013,9 +23013,9 @@ puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (327.5ms)
 Started GET "/images/logo.png" for ::1 at 2017-01-14 12:17:47 -0800
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/logo.png"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -23060,9 +23060,9 @@ Completed 200 OK in 2254ms (Views: 2251.8ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/images/logo.png" for ::1 at 2017-01-15 13:03:00 -0800
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/logo.png"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -23106,9 +23106,9 @@ Completed 200 OK in 123ms (Views: 120.7ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/images/logo.png" for ::1 at 2017-01-15 13:06:23 -0800
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/logo.png"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -23144,9 +23144,9 @@ puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (187.1ms)
 Started GET "/images/logo2.png" for ::1 at 2017-01-15 13:08:31 -0800
-  
+
 ActionController::RoutingError (No route matches [GET] "/images/logo2.png"):
-  
+
 actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
 web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
 web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
@@ -23187,180 +23187,3 @@ Processing by StaticController#home as HTML
   Rendered static/home.html.erb within layouts/application (3.8ms)
   Rendered layouts/_header.html.erb (1.7ms)
 Completed 200 OK in 137ms (Views: 134.0ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for ::1 at 2017-01-15 16:58:14 -0800
-  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-Processing by StaticController#home as HTML
-  Rendering static/home.html.erb within layouts/application
-  Rendered static/home.html.erb within layouts/application (399.3ms)
-  Rendered layouts/_header.html.erb (1.6ms)
-Completed 200 OK in 613ms (Views: 610.5ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/" for ::1 at 2017-01-15 17:00:26 -0800
-Processing by StaticController#home as HTML
-  Rendering static/home.html.erb within layouts/application
-  Rendered static/home.html.erb within layouts/application (8.2ms)
-  Rendered layouts/_header.html.erb (2.1ms)
-Completed 200 OK in 157ms (Views: 154.7ms | ActiveRecord: 0.0ms)
-
-
-Started GET "/u/sign_in" for ::1 at 2017-01-15 17:00:28 -0800
-Processing by Users::SessionsController#new as HTML
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (2.1ms)
-  Rendered devise/sessions/new.html.erb within layouts/application (40.7ms)
-  Rendered layouts/_header.html.erb (2.8ms)
-Completed 200 OK in 204ms (Views: 161.4ms | ActiveRecord: 20.6ms)
-
-
-Started POST "/u/sign_in" for ::1 at 2017-01-15 17:00:30 -0800
-Processing by Users::SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5bbdR393DAKo45jCbivOAHJqQBplW7aR6a6zVzGBG4/K/8Nke4irQhPVEwOw4+zIjpAuo2JQROeqzjZ1t/F5gw==", "user"=>{"email"=>"jack@mit.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-  [1m[36mUser Load (5.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jack@mit.edu"], ["LIMIT", 1]]
-Completed 401 Unauthorized in 17ms (ActiveRecord: 5.6ms)
-
-
-Processing by Users::SessionsController#new as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5bbdR393DAKo45jCbivOAHJqQBplW7aR6a6zVzGBG4/K/8Nke4irQhPVEwOw4+zIjpAuo2JQROeqzjZ1t/F5gw==", "user"=>{"email"=>"jack@mit.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (1.9ms)
-  Rendered devise/sessions/new.html.erb within layouts/application (6.8ms)
-  Rendered layouts/_header.html.erb (2.2ms)
-Completed 200 OK in 284ms (Views: 120.0ms | ActiveRecord: 0.0ms)
-
-
-  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-Started POST "/u/sign_in" for ::1 at 2017-01-15 17:01:16 -0800
-Processing by Users::SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BOwWq61THEwV+ridHTqDk0r6sC4gwscXa2rgZmi1DNx56mOdnxPCpRTtuzvNuIfoVPldlpu9y6avdOYWP9Ae0g==", "user"=>{"email"=>"harrilal@mit.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "harrilal@mit.edu"], ["LIMIT", 1]]
-  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (3.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-01-16 01:01:16 UTC], ["last_sign_in_at", 2017-01-13 21:18:31 UTC], ["sign_in_count", 12], ["updated_at", 2017-01-16 01:01:16 UTC], ["id", 1]]
-  [1m[36mActsAsTaggableOn::Tagging Load (3.9ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
-  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
-Redirected to http://localhost:3000/users
-Completed 302 Found in 193ms (ActiveRecord: 15.1ms)
-
-
-Started GET "/users" for ::1 at 2017-01-15 17:01:16 -0800
-DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/controllers/users_controller.rb:4)
-Processing by UsersController#index as HTML
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  Rendering users/index.html.erb within layouts/application
-  [1m[36mTag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
-  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 8], ["taggable_type", "User"]]
-  [1m[36mActsAsTaggableOn::Tag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 8], ["taggable_type", "User"]]
-  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 9], ["taggable_type", "User"]]
-  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 9], ["taggable_type", "User"]]
-  Rendered users/index.html.erb within layouts/application (43.8ms)
-  Rendered layouts/_header.html.erb (2.4ms)
-Completed 200 OK in 172ms (Views: 154.8ms | ActiveRecord: 9.6ms)
-
-
-Started GET "/users/1" for ::1 at 2017-01-15 17:01:25 -0800
-Processing by UsersController#show as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  Rendering users/show.html.erb within layouts/application
-  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
-  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
-  Rendered users/show.html.erb within layouts/application (14.9ms)
-  Rendered layouts/_header.html.erb (2.9ms)
-Completed 200 OK in 143ms (Views: 129.5ms | ActiveRecord: 3.4ms)
-
-
-Started GET "/users/1/edit" for ::1 at 2017-01-15 17:01:27 -0800
-Processing by UsersController#edit as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  Rendering users/edit.html.erb within layouts/application
-  [1m[36mTag Load (1.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."name" ASC[0m
-  [1m[35m (1.0ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "User"], ["context", "tags"]]
-  Rendered users/edit.html.erb within layouts/application (28.4ms)
-  Rendered layouts/_header.html.erb (3.1ms)
-Completed 200 OK in 157ms (Views: 139.9ms | ActiveRecord: 6.1ms)
-
-
-Started GET "/users/1/edit" for ::1 at 2017-01-15 17:02:51 -0800
-Processing by UsersController#edit as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  Rendering users/edit.html.erb within layouts/application
-  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."name" ASC[0m
-  [1m[35m (1.1ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "User"], ["context", "tags"]]
-  Rendered users/edit.html.erb within layouts/application (16.2ms)
-  Rendered layouts/_header.html.erb (2.1ms)
-Completed 200 OK in 152ms (Views: 142.0ms | ActiveRecord: 3.1ms)
-
-
-Started GET "/users/1/edit" for ::1 at 2017-01-15 17:02:53 -0800
-Processing by UsersController#edit as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  Rendering users/edit.html.erb within layouts/application
-  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."name" ASC[0m
-  [1m[35m (0.7ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "User"], ["context", "tags"]]
-  Rendered users/edit.html.erb within layouts/application (11.2ms)
-  Rendered layouts/_header.html.erb (2.9ms)
-Completed 200 OK in 114ms (Views: 107.2ms | ActiveRecord: 2.1ms)
-
-
-Started GET "/users/1/edit" for ::1 at 2017-01-15 17:03:21 -0800
-Processing by UsersController#edit as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  Rendering users/edit.html.erb within layouts/application
-  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."name" ASC[0m
-  [1m[35m (0.8ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "User"], ["context", "tags"]]
-  Rendered users/edit.html.erb within layouts/application (12.8ms)
-  Rendered layouts/_header.html.erb (3.4ms)
-Completed 200 OK in 113ms (Views: 105.2ms | ActiveRecord: 2.3ms)
-
-
-Started GET "/users/1/edit" for ::1 at 2017-01-15 17:05:02 -0800
-Processing by UsersController#edit as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  Rendering users/edit.html.erb within layouts/application
-  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."name" ASC[0m
-  [1m[35m (0.7ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "User"], ["context", "tags"]]
-  Rendered users/edit.html.erb within layouts/application (14.6ms)
-  Rendered layouts/_header.html.erb (2.9ms)
-Completed 200 OK in 136ms (Views: 125.9ms | ActiveRecord: 3.1ms)
-
-
-Started GET "/users/1/edit" for ::1 at 2017-01-15 17:06:44 -0800
-Processing by UsersController#edit as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  Rendering users/edit.html.erb within layouts/application
-  [1m[36mTag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."name" ASC[0m
-  [1m[35m (1.0ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "User"], ["context", "tags"]]
-  Rendered users/edit.html.erb within layouts/application (33.2ms)
-  Rendered layouts/_header.html.erb (3.9ms)
-Completed 200 OK in 197ms (Views: 169.1ms | ActiveRecord: 3.1ms)
-
-
-Started GET "/users/1/edit" for ::1 at 2017-01-15 17:07:29 -0800
-Processing by UsersController#edit as HTML
-  Parameters: {"id"=>"1"}
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  Rendering users/edit.html.erb within layouts/application
-  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."name" ASC[0m
-  [1m[35m (2.2ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "User"], ["context", "tags"]]
-  Rendered users/edit.html.erb within layouts/application (85.5ms)
-  Rendered layouts/_header.html.erb (3.2ms)
-Completed 200 OK in 209ms (Views: 196.5ms | ActiveRecord: 4.4ms)
-
-
