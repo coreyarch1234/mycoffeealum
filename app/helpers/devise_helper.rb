@@ -1,5 +1,5 @@
 module DeviseHelper
   def devise_error_messages_new_user!
-    'Must provide a Make School email!'
+    'Must Provide a Make School Email!'
   end
 end
