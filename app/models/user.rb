@@ -11,7 +11,6 @@ class User < ApplicationRecord
   validates :description, length: { maximum: 800 }
   VALID_LINKEDIN_REGEX = /|(?:(?:http|https):\/\/)?(?:www.)?linkedin.com\/in\/.*/
   validates :linkedin_url, format: { with: VALID_LINKEDIN_REGEX }
-  VALID_EMAIL_REGEX = /\A[\w+\-.]+@(students.)?makeschool\.com/i
   validates :email, presence: true, length: { maximum: 255 },
                     format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
