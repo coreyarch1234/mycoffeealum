@@ -23187,3 +23187,270 @@ Processing by StaticController#home as HTML
   Rendered static/home.html.erb within layouts/application (3.8ms)
   Rendered layouts/_header.html.erb (1.7ms)
 Completed 200 OK in 137ms (Views: 134.0ms | ActiveRecord: 0.0ms)
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (4.8ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 13], ["taggable_type", "User"]]
+  [1m[35mSQL (1.9ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = $1[0m  [["id", 56]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (1.9ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = $1[0m  [["id", 2]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = $1[0m  [["id", 55]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (1.2ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = $1[0m  [["id", 6]]
+  [1m[35mSQL (1.7ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = $1[0m  [["id", 54]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = $1[0m  [["id", 4]]
+  [1m[35mSQL (1.9ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = $1[0m  [["id", 53]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 23], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = $1[0m  [["id", 23]]
+  [1m[35mSQL (1.0ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."id" = $1[0m  [["id", 52]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."id" = $1 LIMIT $2[0m  [["id", 22], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" = $1[0m  [["id", 22]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 13], ["taggable_type", "User"], ["context", "tags"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 13]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 16], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (1.1ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 16], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (1.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 16], ["taggable_type", "User"], ["context", "tags"]]
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 16]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 17], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (1.7ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 17], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (3.1ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 17], ["taggable_type", "User"], ["context", "tags"]]
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = $1[0m  [["id", 17]]
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (1.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) AND ("users"."id" != $2) LIMIT $3[0m  [["email", "harrilal@mit.edu"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 1], ["taggable_type", "User"], ["context", "tags"]]
+Started GET "/" for ::1 at 2017-01-15 21:52:11 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (509.9ms)
+  Rendered layouts/_header.html.erb (1.2ms)
+Completed 200 OK in 772ms (Views: 769.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/u/sign_up" for ::1 at 2017-01-15 21:52:14 -0800
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (38.8ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 163ms (Views: 125.6ms | ActiveRecord: 9.5ms)
+
+
+Started POST "/u" for ::1 at 2017-01-15 21:52:26 -0800
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pQVv6ldm1iHJfU+JvNuTVH/fJLEwRg4i0M9uB7Es/XpCUqf2hukxod+XXj5r+o+vSgfzPQz7pO4i8z7ura094g==", "user"=>{"email"=>"corey.harrilal@students.makeschool.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "corey.harrilal@students.makeschool.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "corey.harrilal@students.makeschool.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 359ms (Views: 131.8ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 21:53:56 -0800
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 121ms (Views: 117.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/u/sign_up" for ::1 at 2017-01-15 21:53:57 -0800
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (16.9ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 165ms (Views: 163.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/u" for ::1 at 2017-01-15 21:54:24 -0800
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XBBKQLoTrzUF5QIznCfRDF5F+Tx13ytcSbTeHpzjOO67R4Jca5xItRMPE4RLBs33a50usEligZC7iI73gGL4dg==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.7ms)
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 260ms (Views: 113.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/u/sign_up" for ::1 at 2017-01-15 21:55:36 -0800
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 162ms (Views: 136.4ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/u" for ::1 at 2017-01-15 21:55:48 -0800
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VVn1hmU3i9YnQRuUkjRvMpmJ2dZRQBemYp44Ygi40C0+p2Jx7oAKkbe2XsIq0rvEJoMQzfRZZNik5o/8Sqj2kw==", "user"=>{"email"=>"corey.harrilal@students.makeschool.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "corey.harrilal@students.makeschool.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "corey.harrilal@students.makeschool.com"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "corey.harrilal@students.makeschool.com"], ["encrypted_password", "$2a$11$r5sQBIshQQhqazSDps/Gdu/maqtTWnV3lJYhuq/pfbS3uPh0sAvVW"], ["created_at", 2017-01-16 05:55:48 UTC], ["updated_at", 2017-01-16 05:55:48 UTC], ["confirmation_token", "RzAxtkXpvhJzBpmns_qc"], ["confirmation_sent_at", 2017-01-16 05:55:48 UTC]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 19], ["taggable_type", "User"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (0.9ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 166.0ms
+Sent mail to corey.harrilal@students.makeschool.com (561.3ms)
+Date: Sun, 15 Jan 2017 21:55:48 -0800
+From: Some One <no-reply@example.com>
+Reply-To: Some One <no-reply@example.com>
+To: corey.harrilal@students.makeschool.com
+Message-ID: <587c6064cefdb_3caa3fc4c0a6c4345995d@Coreys-MacBook-Pro.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+  <p>Welcome corey.harrilal@students.makeschool.com!</p>
+
+  <p>You can confirm your account email through the link below:</p>
+
+  <p><a href="http://localhost:3000/u/confirmation?confirmation_token=RzAxtkXpvhJzBpmns_qc">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 920ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 21:55:49 -0800
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 88ms (Views: 86.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 21:57:56 -0800
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (18.4ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 192ms (Views: 184.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/u/sign_up" for ::1 at 2017-01-15 21:57:59 -0800
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (16.5ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 145ms (Views: 139.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/u" for ::1 at 2017-01-15 21:58:12 -0800
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"E37i+GpnUlZ4PaxcMORd9kR3xslvZRus9I8hGpK/RgT0KSrku+i11m7XvevnxUENca8RRVPYsWAGs3Hzjj6GnA==", "user"=>{"email"=>"corey.harrilal@students.makeschool.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "corey.harrilal@students.makeschool.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "corey.harrilal@students.makeschool.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "corey.harrilal@students.makeschool.com"], ["encrypted_password", "$2a$11$FkD.muFIxLfbIkft4Uo7r.gZP4sgyUvc89jLcH91XKHHZRwE0vlca"], ["created_at", 2017-01-16 05:58:12 UTC], ["updated_at", 2017-01-16 05:58:12 UTC], ["confirmation_token", "zjWLxu7QLsnLKBnVxZyJ"], ["confirmation_sent_at", 2017-01-16 05:58:12 UTC]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 20], ["taggable_type", "User"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (1.3ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 27.0ms
+Sent mail to corey.harrilal@students.makeschool.com (581.4ms)
+Date: Sun, 15 Jan 2017 21:58:12 -0800
+From: Some One <no-reply@example.com>
+Reply-To: Some One <no-reply@example.com>
+To: corey.harrilal@students.makeschool.com
+Message-ID: <587c60f456e07_3caa3fc4c0a6c68c60076@Coreys-MacBook-Pro.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+  <p>Welcome corey.harrilal@students.makeschool.com!</p>
+
+  <p>You can confirm your account email through the link below:</p>
+
+  <p><a href="http://localhost:3000/u/confirmation?confirmation_token=zjWLxu7QLsnLKBnVxZyJ">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 781ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 21:58:12 -0800
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 117ms (Views: 115.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/u/sign_up" for ::1 at 2017-01-15 21:59:52 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (34.3ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 572ms (Views: 530.4ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/u" for ::1 at 2017-01-15 22:00:06 -0800
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t5lfLegKWfzCwR3LCACMoUs41VrmOcfRzX4ok+oxLHJQzpcxOYW+fNQrDHzfIZBafuAC1tqEbR0/Qnh69rDs6g==", "user"=>{"email"=>"corey.harrilal@students.makeschool.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "corey.harrilal@students.makeschool.com"], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER($1) LIMIT $2[0m  [["email", "corey.harrilal@students.makeschool.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "corey.harrilal@students.makeschool.com"], ["encrypted_password", "$2a$11$MZr14Ztk87IMJfGCrRe6oeIy69oiA7OC8ksQbfdUMO9F7uzEXxsQy"], ["created_at", 2017-01-16 06:00:06 UTC], ["updated_at", 2017-01-16 06:00:06 UTC], ["confirmation_token", "d7UXEEhMvqpTJmLrXkA9"], ["confirmation_sent_at", 2017-01-16 06:00:06 UTC]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 21], ["taggable_type", "User"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (0.8ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 137.9ms
+Sent mail to corey.harrilal@students.makeschool.com (192.7ms)
+Date: Sun, 15 Jan 2017 22:00:06 -0800
+From: Make Mentor <no-reply@example.com>
+Reply-To: Make Mentor <no-reply@example.com>
+To: corey.harrilal@students.makeschool.com
+Message-ID: <587c6166b366c_3d433fdf354ca618887c7@Coreys-MacBook-Pro.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+  <p>Welcome corey.harrilal@students.makeschool.com!</p>
+
+  <p>You can confirm your account email through the link below:</p>
+
+  <p><a href="http://localhost:3000/u/confirmation?confirmation_token=d7UXEEhMvqpTJmLrXkA9">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 548ms (ActiveRecord: 11.6ms)
+
+
+Started GET "/" for ::1 at 2017-01-15 22:00:06 -0800
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 128ms (Views: 125.9ms | ActiveRecord: 0.0ms)
+
+
