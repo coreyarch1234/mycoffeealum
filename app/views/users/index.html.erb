@@ -18,17 +18,26 @@
               <header class="major">
                   <h2><%="Find" %></h2>
               </header>
+              <!-- Mentor and Student and Alumni Buttons Icon Bar -->
+              <div class="icon-bar four-up">
+                  <p>Mentors</p>
+                  <p>Students</p>
+                  <p>Alumni</p>
+                  <p>Everyone</p>
+              </div>
+
+
+
+
               <section id="search" class="alt">
                   <%= form_tag users_path, :method => 'get' do %>
                       <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
                   <% end %>
-
               </section>
               <div class="posts">
-                <% @temp_array.each do |user| %>
+                <% @users.each do |user| %>
                     <article>
                       <%= link_to user do %>
-                        <!-- image -->
                         <span class="image object">
                               <%= image_tag user.picture.url if user.picture? %>
                         </span>
@@ -48,8 +57,6 @@
                 <% end %>
               </div>
             </section>
-
         </div>
     </div>
-
 </div>

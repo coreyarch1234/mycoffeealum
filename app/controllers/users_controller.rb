@@ -14,7 +14,6 @@ class UsersController < ApplicationController
         @users = User.search(params[:search])
     end
   end
-
   # GET /users/1
   # GET /users/1.json
   def show
@@ -60,33 +59,25 @@ class UsersController < ApplicationController
     end
 
     def set_user_type
-         @users = User.all
-         @student_array = Array.new
-         @mentor_array = Array.new
-         @alumni_array = Array.new
-         @users.each do |user|
-             if user.role == "student"
-                  @student_array.append(user)
-              elsif user.role == "mentor"
-                  @mentor_array.append(user)
-              else
-                  @alumni_array.append(user)
-              end
-         end
-
+        #  @users = User.all
+        #  @student_array = User.role("student")
+        #  @mentor_array = User.role("mentor")
+        #  @alumni_array = User.role("alumni")
          if current_user.role == "student" || current_user.role == "alumni"
-              @temp_array = @mentor_array + @student_array + @alumni_array
+            #   @temp_array = @mentor_array + @student_array + @alumni_array
+            @users = User.role("mentor") + User.role("student") + User.role("alumni")
 
           elsif current_user.role == "mentor"
-              @temp_array = @student_array
+              @users = User.role("student")
+            #   @temp_array = @student_array
           else
-             @temp_array = @users
+             @users = User.all
          end
     end
 
 
     def set_tags_for_users
-         @temp_array.each do |user|
+         @users.each do |user|
              @tag_array_select = Array.new
              user.tag_list.each do |tag|
                  @tag_array_select.append(tag)
