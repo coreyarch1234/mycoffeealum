@@ -24901,3 +24901,47 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 2359ms (Views: 2227.9ms | ActiveRecord: 16.0ms)
 
 
+Started DELETE "/u/sign_out" for ::1 at 2017-01-16 20:31:41 -0800
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"FFVkMu79P+PX8RRHyhohWJfnFqCRTzJMpsF5YkxhRGnSRkNNY7MJZR7s4YQ12Htgs8MSuggNYK7aiVSsFGRkbQ=="}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 64ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2017-01-16 20:31:41 -0800
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (8.8ms)
+  Rendered layouts/_header.html.erb (1.4ms)
+Completed 200 OK in 1996ms (Views: 1990.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/u/sign_in" for ::1 at 2017-01-16 20:31:47 -0800
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.0ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+Completed 200 OK in 139ms (Views: 137.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/u/sign_in" for ::1 at 2017-01-16 20:31:57 -0800
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XDcmi3yY0OWMEoZ72aKpYtxeeFr46GYaZvA0+O1DPM/iEl3Z4AR1gWLnCAmLA4NjAnoMF+6jIJLqP2jEe1hYdQ==", "user"=>{"email"=>"jack@mit.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (14.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jack@mit.edu"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 159ms (ActiveRecord: 14.1ms)
+
+
+Processing by Users::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XDcmi3yY0OWMEoZ72aKpYtxeeFr46GYaZvA0+O1DPM/iEl3Z4AR1gWLnCAmLA4NjAnoMF+6jIJLqP2jEe1hYdQ==", "user"=>{"email"=>"jack@mit.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.8ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+Completed 200 OK in 238ms (Views: 109.3ms | ActiveRecord: 0.0ms)
+
+
