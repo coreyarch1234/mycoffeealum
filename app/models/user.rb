@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  scope :role, -> (role) { where role: role }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
   mount_uploader :picture, PictureUploader
@@ -33,14 +34,6 @@ class User < ApplicationRecord
   end
 
   private
-
-    def self.is_student
-      self.role == :student
-    end
-
-    def self.is_staff
-      self.role == :staff
-    end
 
     # Validates the size of an uploaded picture.
     def picture_size
