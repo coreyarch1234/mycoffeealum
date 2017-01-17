@@ -33,7 +33,7 @@
                       <p id = "role"><%= user.role %></p>
                       <p><%= user.title %></p>
                       <div class="tag-index">
-                          <% @tag_array_select.each do |tag| %>
+                          <% user.tag_list.each do |tag| %>
                              <div class="tag-thin-gap"><p><%= link_to tag, tag_user_path(tag) %></p></div>
                           <%end%>
                       </div>

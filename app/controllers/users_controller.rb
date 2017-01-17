@@ -88,8 +88,10 @@ class UsersController < ApplicationController
     end
 
     def profile_filled
-        if current_user.description == ""
+        if current_user
+            if current_user.description == ""
             flash[:notice] = "Fill in your profile!"
+            end
         end
     end
 

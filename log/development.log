@@ -25360,3 +25360,759 @@ Processing by UsersController#show as HTML
 Completed 200 OK in 283ms (Views: 217.1ms | ActiveRecord: 4.1ms)
 
 
+Started GET "/users/2" for ::1 at 2017-01-16 21:27:47 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  Rendered users/show.html.erb within layouts/application (57.6ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 319ms (Views: 243.8ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users" for ::1 at 2017-01-16 21:27:49 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTag Load (2.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 0]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.8ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != 2)[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  Rendered users/index.html.erb within layouts/application (19.6ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 360ms (Views: 299.1ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/users/3" for ::1 at 2017-01-16 21:27:53 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActsAsTaggableOn::Tagging Load (4.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  Rendered users/show.html.erb within layouts/application (16.7ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 178ms (Views: 159.1ms | ActiveRecord: 10.9ms)
+
+
+Started DELETE "/u/sign_out" for ::1 at 2017-01-16 21:27:58 -0800
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"zUeyABVn69i7X0txTae4xSCApYFs844fJE1IE6YAzLUMpUVpH/D943+zsvOffOgcG68P5KUjNqcMk19uhszwCw=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (1.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-16 21:27:58 -0800
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 227ms (Views: 224.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/u/sign_in" for ::1 at 2017-01-16 21:28:03 -0800
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 195ms (Views: 192.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/u/sign_in" for ::1 at 2017-01-16 21:28:40 -0800
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cnJk4WNYWKO51UO1WDNHt8wO0hG4cmghGAeL/K4A8rZp6WqJZx07mkyBBPOJATAe7nIpz3GUjyLUzeuijj71OQ==", "user"=>{"email"=>"corey.harrilal@students.makeschool.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "corey.harrilal@students.makeschool.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-01-17 05:28:40 UTC], ["last_sign_in_at", 2017-01-17 01:15:28 UTC], ["sign_in_count", 5], ["updated_at", 2017-01-17 05:28:40 UTC], ["id", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 156ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/" for ::1 at 2017-01-16 21:28:40 -0800
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by UsersController#index as HTML
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 0]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != 1)[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  Rendered users/index.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 148ms (Views: 124.0ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/1" for ::1 at 2017-01-16 21:28:43 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  Rendered users/show.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_header.html.erb (2.8ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 150ms (Views: 140.3ms | ActiveRecord: 2.2ms)
+
+
+Started DELETE "/u/sign_out" for ::1 at 2017-01-16 21:28:46 -0800
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wPctxVplnxt8906MFnl9NIF/wtpQDK6dcxCQV/7yWJsIkDTWpnxzHbxNe1FQjUQfGBnbpua68sZsIDUMgkNbzA=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 14ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/" for ::1 at 2017-01-16 21:28:46 -0800
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 101ms (Views: 98.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/u/sign_in" for ::1 at 2017-01-16 21:28:48 -0800
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 136ms (Views: 134.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/u/sign_in" for ::1 at 2017-01-16 21:28:50 -0800
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mWAWZIFcF5JVyRyYsURDkL7GD7z/Ijz46RA129yjYedfnouaFMu0QuSY7pcBkAERkpcx/HUH6E5fDSYeZPwiLQ==", "user"=>{"email"=>"jack@mit.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jack@mit.edu"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-01-17 05:28:50 UTC], ["last_sign_in_at", 2017-01-17 05:01:44 UTC], ["sign_in_count", 9], ["updated_at", 2017-01-17 05:28:50 UTC], ["id", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 149ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2017-01-16 21:28:50 -0800
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Processing by UsersController#index as HTML
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 0]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != 2)[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  Rendered users/index.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 139ms (Views: 116.2ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/2" for ::1 at 2017-01-16 21:28:52 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  Rendered users/show.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 128ms (Views: 118.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/2/edit" for ::1 at 2017-01-16 21:28:57 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."name" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "User"], ["context", "tags"]]
+  Rendered users/edit.html.erb within layouts/application (21.3ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 113ms (Views: 102.5ms | ActiveRecord: 4.8ms)
+
+
+Started PATCH "/users/2" for ::1 at 2017-01-16 21:29:03 -0800
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0i1RBXKu9vg55y8CNaI8GAj6a/mzCylVIdRsK6hQLCyDfajBTiclAdMoaR7Hs6zme1/5yHmHOAgLm16smy2yrQ==", "user"=>{"first_name"=>"Jack", "last_name"=>"Harrison", "role"=>"student", "title"=>"Android Developer", "description"=>"", "linkedin_url"=>"https://www.linkedin.com/in/simmunity/", "tag_ids"=>["", "1", "2", "5"]}, "commit"=>"Update User", "id"=>"2"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" IN (1, 2, 5)[0m
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 2], ["taggable_type", "User"], ["context", "tags"]]
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3 AND "taggings"."tag_id" IN (6, 3)[0m  [["taggable_id", 2], ["taggable_type", "User"], ["context", "tags"]]
+  [1m[35mSQL (7.9ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) - 1 WHERE "tags"."id" IN (6, 3)[0m
+  [1m[36mActsAsTaggableOn::Tag Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "tags" WHERE "tags"."name" = $1 AND ("tags"."id" != $2) LIMIT $3[0m  [["name", "entrepreneurship"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 2], ["context", "tags"], ["LIMIT", 1]]
+  [1m[35mSQL (18.4ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 2], ["context", "tags"], ["created_at", 2017-01-17 05:29:04 UTC]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = $1[0m  [["id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "tags" WHERE "tags"."name" = $1 AND ("tags"."id" != $2) LIMIT $3[0m  [["name", "health"], ["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 5], ["taggable_type", "User"], ["taggable_id", 2], ["context", "tags"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 5], ["taggable_type", "User"], ["taggable_id", 2], ["context", "tags"], ["created_at", 2017-01-17 05:29:04 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = $1[0m  [["id", 5]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('health') OR LOWER(name) = LOWER('entrepreneurship') OR LOWER(name) = LOWER('data analysis'))[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('health') OR LOWER(name) = LOWER('entrepreneurship') OR LOWER(name) = LOWER('data analysis'))[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 178ms (ActiveRecord: 36.3ms)
+
+
+Started GET "/users/2" for ::1 at 2017-01-16 21:29:04 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  Rendered users/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 89ms (Views: 83.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for ::1 at 2017-01-16 21:29:07 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (3.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != 2)[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 3], ["taggable_type", "User"]]
+  Rendered users/index.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 122ms (Views: 87.1ms | ActiveRecord: 8.7ms)
+
+
+Started DELETE "/u/sign_out" for ::1 at 2017-01-16 21:29:27 -0800
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"0m5F+JUkjz1/h8dZF/K3cwpGgRlfoE2RWAvhWZTjSxZmqvKTJBUS538uzQGy96NrqLuO2tlPXdJeetsGkaES2A=="}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-01-16 21:29:27 -0800
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 114ms (Views: 112.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/u/sign_up" for ::1 at 2017-01-16 21:29:34 -0800
+Processing by Users::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.3ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+  Rendered layouts/_messages.html.erb (1.9ms)
+Completed 200 OK in 132ms (Views: 129.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/u" for ::1 at 2017-01-16 21:30:28 -0800
+Processing by Users::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ysWX4VDpBX1/r7KLee7GpJcG+uHMWPhd8oKNPUxFCRbZGSxE6ZbyFsoNTwOKAzjqegP+RMoB5eQMi9edJxmBdg==", "user"=>{"email"=>"corey.archharr@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "corey.archharr@gmail.com"], ["LIMIT", 1]]
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "confirmation_token", "confirmation_sent_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "corey.archharr@gmail.com"], ["encrypted_password", "$2a$11$g.Ri6GOhSt.t9pFulntY/O7sXn8qEbDaWJIwneV9xmYxRFdLC1aI6"], ["created_at", 2017-01-17 05:30:28 UTC], ["updated_at", 2017-01-17 05:30:28 UTC], ["confirmation_token", "B54aJqYDhXLvibcAtgo1"], ["confirmation_sent_at", 2017-01-17 05:30:28 UTC]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (4.8ms)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 327.6ms
+Sent mail to corey.archharr@gmail.com (198.5ms)
+Date: Mon, 16 Jan 2017 21:30:29 -0800
+From: Make Mentor <no-reply@example.com>
+Reply-To: Make Mentor <no-reply@example.com>
+To: corey.archharr@gmail.com
+Message-ID: <587dabf549c9c_4ed03fe9f09fc1e8973ea@Coreys-MacBook-Pro.local.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+  <p>Welcome corey.archharr@gmail.com!</p>
+
+  <p>You can confirm your account email through the link below:</p>
+
+  <p><a href="http://localhost:3000/u/confirmation?confirmation_token=B54aJqYDhXLvibcAtgo1">Confirm my account</a></p>
+
+Redirected to http://localhost:3000/
+Completed 302 Found in 785ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-16 21:30:29 -0800
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 131ms (Views: 129.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/u/confirmation?confirmation_token=B54aJqYDhXLvibcAtgo1" for ::1 at 2017-01-16 21:31:38 -0800
+Processing by Users::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"B54aJqYDhXLvibcAtgo1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["confirmation_token", "B54aJqYDhXLvibcAtgo1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["confirmed_at", 2017-01-17 05:31:38 UTC], ["updated_at", 2017-01-17 05:31:38 UTC], ["id", 4]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.6ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/4/edit
+Completed 302 Found in 49ms (ActiveRecord: 4.2ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2017-01-16 21:31:38 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.9ms)
+
+
+  
+NoMethodError (undefined method `description' for nil:NilClass):
+  
+app/controllers/users_controller.rb:91:in `profile_filled'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.3ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (69.5ms)
+Started GET "/users/4/edit" for ::1 at 2017-01-16 21:34:04 -0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/controllers/users_controller.rb:5)
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms)
+
+
+  
+NoMethodError (undefined method `description' for nil:NilClass):
+  
+app/controllers/users_controller.rb:92:in `profile_filled'
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.8ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendering /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/lib/ruby/gems/2.3.0/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.3ms)
+Started GET "/users/4/edit" for ::1 at 2017-01-16 21:34:18 -0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/controllers/users_controller.rb:5)
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+Completed 401 Unauthorized in 26ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/u/sign_in" for ::1 at 2017-01-16 21:34:18 -0800
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 150ms (Views: 147.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/u/confirmation?confirmation_token=B54aJqYDhXLvibcAtgo1" for ::1 at 2017-01-16 21:34:28 -0800
+Processing by Users::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"B54aJqYDhXLvibcAtgo1"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."confirmation_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["confirmation_token", "B54aJqYDhXLvibcAtgo1"], ["LIMIT", 1]]
+  Rendering devise/confirmations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/confirmations/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 106ms (Views: 100.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/u/sign_in" for ::1 at 2017-01-16 21:34:37 -0800
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 117ms (Views: 115.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/u/sign_in" for ::1 at 2017-01-16 21:34:46 -0800
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JBp5Zs9SDwB9HcWmzkySYQVFGfnH/+AV5e9HOW3SRPVZFLlAsuQ1wgYDykpflzp9ZGnVB2AUTJQ18cJVA0Rp7A==", "user"=>{"email"=>"corey.archharr@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "corey.archharr@gmail.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "current_sign_in_ip" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["current_sign_in_at", 2017-01-17 05:34:46 UTC], ["last_sign_in_at", 2017-01-17 05:34:46 UTC], ["current_sign_in_ip", "::1/128"], ["last_sign_in_ip", "::1/128"], ["sign_in_count", 1], ["updated_at", 2017-01-17 05:34:46 UTC], ["id", 4]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/4/edit
+Completed 302 Found in 154ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/users/4/edit" for ::1 at 2017-01-16 21:34:46 -0800
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" ORDER BY "tags"."name" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "tags".id FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 4], ["taggable_type", "User"], ["context", "tags"]]
+  Rendered users/edit.html.erb within layouts/application (20.2ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 171ms (Views: 165.0ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "/users/4" for ::1 at 2017-01-16 21:35:22 -0800
+Processing by UsersController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lbkX6ROj2InjaBBoNdRbWBFw0IlfPMkxvbm6VajOj+pp0C5zTKy8foHhSQ+xv6sGxzweciyg5Qnr8hNLBX+N2g==", "user"=>{"first_name"=>"Naruto ", "last_name"=>"Uzamaki", "role"=>"student", "title"=>"rtsfdgctfcw", "description"=>"", "linkedin_url"=>"google.com", "tag_ids"=>["", "2", "3"], "picture"=>#<ActionDispatch::Http::UploadedFile:0x007fd3e56dc250 @tempfile=#<Tempfile:/var/folders/9b/svg78kcs405726n4291rx8tc0000gn/T/RackMultipart20170116-20176-mn856m.png>, @original_filename="Screen Shot 2017-01-15 at 11.45.36 PM.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[picture]\"; filename=\"Screen Shot 2017-01-15 at 11.45.36 PM.png\"\r\nContent-Type: image/png\r\n">}, "commit"=>"Update User", "id"=>"4"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE "tags"."id" IN (2, 3)[0m
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."context" = $3[0m  [["taggable_id", 4], ["taggable_type", "User"], ["context", "tags"]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "tags" WHERE "tags"."name" = $1 AND ("tags"."id" != $2) LIMIT $3[0m  [["name", "entrepreneurship"], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 4], ["context", "tags"], ["LIMIT", 1]]
+  [1m[35mSQL (6.2ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 2], ["taggable_type", "User"], ["taggable_id", 4], ["context", "tags"], ["created_at", 2017-01-17 05:35:22 UTC]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = $1[0m  [["id", 2]]
+  [1m[36mActsAsTaggableOn::Tag Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "tags" WHERE "tags"."name" = $1 AND ("tags"."id" != $2) LIMIT $3[0m  [["name", "iOS development"], ["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "taggings" WHERE "taggings"."tag_id" = $1 AND "taggings"."taggable_type" = $2 AND "taggings"."taggable_id" = $3 AND "taggings"."context" = $4 AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL LIMIT $5[0m  [["tag_id", 3], ["taggable_type", "User"], ["taggable_id", 4], ["context", "tags"], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "taggable_type", "taggable_id", "context", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["tag_id", 3], ["taggable_type", "User"], ["taggable_id", 4], ["context", "tags"], ["created_at", 2017-01-17 05:35:22 UTC]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "tags" SET "taggings_count" = COALESCE("taggings_count", 0) + 1 WHERE "tags"."id" = $1[0m  [["id", 3]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "first_name" = $1, "last_name" = $2, "title" = $3, "description" = $4, "linkedin_url" = $5, "picture" = $6, "updated_at" = $7 WHERE "users"."id" = $8[0m  [["first_name", "Naruto "], ["last_name", "Uzamaki"], ["title", "rtsfdgctfcw"], ["description", ""], ["linkedin_url", "google.com"], ["picture", "Screen_Shot_2017-01-15_at_11.45.36_PM.png"], ["updated_at", 2017-01-17 05:35:22 UTC], ["id", 4]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('ios development') OR LOWER(name) = LOWER('entrepreneurship'))[0m
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" WHERE (LOWER(name) = LOWER('ios development') OR LOWER(name) = LOWER('entrepreneurship'))[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 288ms (ActiveRecord: 22.0ms)
+
+
+Started GET "/users/4" for ::1 at 2017-01-16 21:35:22 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  Rendered users/show.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.html.erb (3.7ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 159ms (Views: 149.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users" for ::1 at 2017-01-16 21:35:25 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 0]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != 4)[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  Rendered users/index.html.erb within layouts/application (24.3ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 170ms (Views: 134.6ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/users" for ::1 at 2017-01-16 21:35:37 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != 4)[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  Rendered users/index.html.erb within layouts/application (11.1ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 154ms (Views: 130.4ms | ActiveRecord: 4.6ms)
+
+
+Started DELETE "/u/sign_out" for ::1 at 2017-01-16 21:35:40 -0800
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"XbQNdYVEzbQqMe3OMIXe2iJfNlNuuOmQkl0KR0BeCjSh3TTv2kupQ0i4tKm07i6E9BP4qB0kxajEFqNZ7e8IBA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2017-01-16 21:35:40 -0800
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 89ms (Views: 87.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/u/sign_in" for ::1 at 2017-01-16 21:35:42 -0800
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 144ms (Views: 141.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/u/sign_in" for ::1 at 2017-01-16 21:35:44 -0800
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/4tW55cDoNesXERYWY/YI49Nqg6htweEUiFArH9Y56fYIjMA9I2xISXbBSU04Ea4b+u6KGbQwR0Vst39uH81Kw==", "user"=>{"email"=>"jack@mit.edu", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "jack@mit.edu"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-01-17 05:35:44 UTC], ["last_sign_in_at", 2017-01-17 05:28:50 UTC], ["sign_in_count", 10], ["updated_at", 2017-01-17 05:35:44 UTC], ["id", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 149ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-16 21:35:44 -0800
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+Processing by UsersController#index as HTML
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != 2)[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  Rendered users/index.html.erb within layouts/application (11.4ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 131ms (Views: 110.8ms | ActiveRecord: 4.0ms)
+
+
+Started DELETE "/u/sign_out" for ::1 at 2017-01-16 21:35:48 -0800
+Processing by Users::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"/7g4XANSqhWo1qddYK0jkrWLTjqcNdwc0bbyobpoEPeVG7U37lCa9IPbN0a4+5QG8ZL/y3fPYBUmG4u2hYeevA=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-01-16 21:35:48 -0800
+Processing by StaticController#home as HTML
+  Rendering static/home.html.erb within layouts/application
+  Rendered static/home.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 107ms (Views: 105.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/u/sign_in" for ::1 at 2017-01-16 21:35:50 -0800
+Processing by Users::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_header.html.erb (3.5ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 110ms (Views: 108.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/u/sign_in" for ::1 at 2017-01-16 21:36:04 -0800
+Processing by Users::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UAurVsPfiGva3RwWhAQbOIwJodKfRcYlPMfJrb8BWuOZFR4vjyqmlo+T7UppON2D3hBQgqT+wXbrTcuq57He1A==", "user"=>{"email"=>"corey.harrilal@students.makeschool.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "corey.harrilal@students.makeschool.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-01-17 05:36:04 UTC], ["last_sign_in_at", 2017-01-17 05:28:40 UTC], ["sign_in_count", 6], ["updated_at", 2017-01-17 05:36:04 UTC], ["id", 1]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 152ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2017-01-16 21:36:04 -0800
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by UsersController#index as HTML
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 0]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != 1)[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  Rendered users/index.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 138ms (Views: 116.8ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/users/4" for ::1 at 2017-01-16 21:36:20 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  Rendered users/show.html.erb within layouts/application (8.6ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 132ms (Views: 123.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users" for ::1 at 2017-01-16 21:36:23 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 0]]
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.8ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.4ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != 1)[0m
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 4], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  Rendered users/index.html.erb within layouts/application (12.0ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 129ms (Views: 93.0ms | ActiveRecord: 10.0ms)
+
+
