@@ -16,8 +16,13 @@
           <div id="main">
             <div class="inner">
               <%= render 'layouts/header' %>
-                <p class="notice"><%= notice %></p>
-                <p class="alert"><%= alert %></p>
+              <% flash.each do |key, value| %>
+                <div class="<%= flash_class(key) %>">
+                     <p class="flash-message"> <%= value %> </p>
+                </div>
+            <% end %>
+                <!-- <p class="notice"><%= notice %></p>
+                <p class="alert"><%= alert %></p> -->
                 <%= yield %>
             </div>
           </div>

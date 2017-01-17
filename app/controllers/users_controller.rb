@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :profile_filled, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   before_filter :validate_user, :only => :edit
   # GET /users
@@ -61,42 +62,18 @@ class UsersController < ApplicationController
     end
 
     def set_user_type
-        #  @users = User.all
-        #  @student_array = Array.new
-        #  @mentor_array = Array.new
-        #  @alumni_array = Array.new
-        #  @users.each do |user|
-        #      if user.role == "student"
-        #           @student_array.append(user)
-        #       elsif user.role == "mentor"
-        #           @mentor_array.append(user)
-        #       else
-        #           @alumni_array.append(user)
-        #       end
-        #  end
-
          if current_user.role == "student" || current_user.role == "alumni"
-            #   @temp_array = @mentor_array + @student_array + @alumni_array
               @users = User.role("mentor") + User.role("student") + User.role("alumni")
 
           elsif current_user.role == "mentor"
-            #   @temp_array = @student_array
               @users = User.role("student")
           else
-            #  @temp_array = @users
              @users = User.all
          end
     end
 
 
     def set_tags_for_users
-        #  @temp_array.each do |user|
-        #      @tag_array_select = Array.new
-        #      user.tag_list.each do |tag|
-        #          @tag_array_select.append(tag)
-        #      end
-        #  end
-
          @users.each do |user|
              @tag_array_select = Array.new
              user.tag_list.each do |tag|
@@ -108,6 +85,12 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def profile_filled
+        if current_user.description == ""
+            flash[:notice] = "Fill in your profile!"
+        end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
