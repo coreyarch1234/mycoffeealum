@@ -24374,3 +24374,66 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 296ms (Views: 207.1ms | ActiveRecord: 19.4ms)
 
 
+Started GET "/users" for ::1 at 2017-01-16 17:09:43 -0800
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:UsersController> at /Users/coreyharrilal/Desktop/ProductAcademy/coffee_alum_makeschool/mycoffeealum/app/controllers/users_controller.rb:4)
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 0]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (0.5ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (2.3ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (7.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != 2)[0m
+  Rendered users/index.html.erb within layouts/application (20.6ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+Completed 200 OK in 325ms (Views: 178.6ms | ActiveRecord: 26.0ms)
+
+
+Started GET "/users/1" for ::1 at 2017-01-16 17:09:49 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActsAsTaggableOn::Tagging Load (1.0ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.7ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  Rendered users/show.html.erb within layouts/application (17.9ms)
+  Rendered layouts/_header.html.erb (3.3ms)
+Completed 200 OK in 204ms (Views: 189.5ms | ActiveRecord: 5.6ms)
+
+
+Started GET "/users/2" for ::1 at 2017-01-16 17:09:53 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mActsAsTaggableOn::Tagging Load (8.6ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  Rendered users/show.html.erb within layouts/application (24.1ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 173ms (Views: 153.2ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/users" for ::1 at 2017-01-16 17:09:55 -0800
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (4.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 1]]
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 0]]
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."role" = $1[0m  [["role", 2]]
+  [1m[36mActsAsTaggableOn::Tagging Load (2.9ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (2.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 2], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tagging Load (1.8ms)[0m  [1m[34mSELECT "taggings".* FROM "taggings" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  [1m[36mActsAsTaggableOn::Tag Load (1.1ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = $1 AND "taggings"."taggable_type" = $2 AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m  [["taggable_id", 1], ["taggable_type", "User"]]
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE ("users"."id" != 2)[0m
+  Rendered users/index.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 199ms (Views: 141.4ms | ActiveRecord: 21.4ms)
+
+
