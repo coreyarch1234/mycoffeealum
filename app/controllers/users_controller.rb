@@ -4,14 +4,15 @@ class UsersController < ApplicationController
   before_filter :validate_user, :only => :edit
   # GET /users
   # GET /users.json
+
   def index
     set_tags
     set_user_type
     set_tags_for_users
     if params[:tag]
-        @users = User.tagged_with(params[:tag])
+        @users = User.all_except(current_user).tagged_with(params[:tag])
     else
-        @users = User.search(params[:search])
+        @users = User.all_except(current_user).search(params[:search])
     end
   end
 
@@ -60,33 +61,43 @@ class UsersController < ApplicationController
     end
 
     def set_user_type
-         @users = User.all
-         @student_array = Array.new
-         @mentor_array = Array.new
-         @alumni_array = Array.new
-         @users.each do |user|
-             if user.role == "student"
-                  @student_array.append(user)
-              elsif user.role == "mentor"
-                  @mentor_array.append(user)
-              else
-                  @alumni_array.append(user)
-              end
-         end
+        #  @users = User.all
+        #  @student_array = Array.new
+        #  @mentor_array = Array.new
+        #  @alumni_array = Array.new
+        #  @users.each do |user|
+        #      if user.role == "student"
+        #           @student_array.append(user)
+        #       elsif user.role == "mentor"
+        #           @mentor_array.append(user)
+        #       else
+        #           @alumni_array.append(user)
+        #       end
+        #  end
 
          if current_user.role == "student" || current_user.role == "alumni"
-              @temp_array = @mentor_array + @student_array + @alumni_array
+            #   @temp_array = @mentor_array + @student_array + @alumni_array
+              @users = User.role("mentor") + User.role("student") + User.role("alumni")
 
           elsif current_user.role == "mentor"
-              @temp_array = @student_array
+            #   @temp_array = @student_array
+              @users = User.role("student")
           else
-             @temp_array = @users
+            #  @temp_array = @users
+             @users = User.all
          end
     end
 
 
     def set_tags_for_users
-         @temp_array.each do |user|
+        #  @temp_array.each do |user|
+        #      @tag_array_select = Array.new
+        #      user.tag_list.each do |tag|
+        #          @tag_array_select.append(tag)
+        #      end
+        #  end
+
+         @users.each do |user|
              @tag_array_select = Array.new
              user.tag_list.each do |tag|
                  @tag_array_select.append(tag)
@@ -104,7 +115,7 @@ class UsersController < ApplicationController
       params.require(:user).permit(:first_name, :last_name, :title, :description, :role,  :linkedin_url, :picture, :tag_list, :tag, { tag_ids: [] }, :tag_ids)
     end
 
-    def validate_user
-     redirect_to user_path unless current_user.id.to_s == params[:id]
-    end
+   def validate_user
+    redirect_to user_path unless current_user.id.to_s == params[:id]
+   end
 end

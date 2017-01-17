@@ -1,19 +1,15 @@
-
 <div class="container">
     <div class="row">
-        <div class="col-6 col-md-4">
-            <section>
+        <div class="col-6 col-md-4" id="tag-filter" >
               <header class="major">
-              <h3>Filter by Tags.</h3>
+                <h3>Filter by Tags.</h3>
               </header>
               <section id="search" class="alt">
-              <% @tag_array.each do |tag| %>
-                <div class="tag-thin-gap"><p><%= link_to tag, tag_user_path(tag) %></p></div>
-              <%end%>
-            </section>
+                <div class="tag-thin-gap"><p><%= link_to "tag", root_path %></p></div>
+              </section>
         </div>
 
-        <div class="col-md-8">
+        <div class="col-md-7" id="find">
             <section>
               <header class="major">
                   <h2><%="Find" %></h2>
@@ -25,27 +21,27 @@
 
               </section>
               <div class="posts">
-                <% @temp_array.each do |user| %>
-                    <article>
-                      <%= link_to user do %>
-                        <!-- image -->
-                        <span class="image object">
-                              <%= image_tag user.picture.url if user.picture? %>
-                        </span>
-                        <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
-                        <p id = "role"><%= user.role %></p>
-                        <p><%= user.title %></p>
-                        <div class="tag-index">
-                            <% @tag_array_select.each do |tag| %>
-                               <div class="tag-thin-gap"><p><%= link_to tag, tag_user_path(tag) %></p></div>
-                            <%end%>
-                       </div>
-                        <ul class="actions">
-                          <li><% link_to "MORE", users_path(user) %></li>
-                        </ul>
-                      <% end %>
-                    </article>
-                <% end %>
+                  <% @users.each do |user| %>
+                  <article>
+                    <%= link_to user do %>
+                      <span class="image object">
+                            <%= image_tag user.picture.url if user.picture? %>
+                      </span>
+                      <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
+                      <p id = "role"><%= user.role %></p>
+                      <p><%= user.title %></p>
+                      <div class="tag-index">
+                          <% @tag_array_select.each do |tag| %>
+                             <div class="tag-thin-gap"><p><%= link_to tag, tag_user_path(tag) %></p></div>
+                          <%end%>
+                     </div>
+                      <ul class="actions">
+                        <li><% link_to "MORE", users_path(user) %></li>
+                      </ul>
+                    <% end %>
+                  </article>
+              <% end %>
+             </div>
               </div>
             </section>
 
