@@ -1,48 +1,74 @@
 <div class="container">
     <div class="row">
-        <div class="col-md-3" id="tag-filter" >
+        <!-- <div class="col-md-3" id="tag-filter" >
             <h2 class="">Recommended</h2>
             <% User.all.where.not(role: current_user.role).shuffle.each do |u| %>
-
             <% end %>
-        </div>
+        </div> -->
 
-        <div class="col-md-9" id="find">
+        <div class="col-md-3" id="tag-filter" >
             <section>
-              <section id="search" class="alt">
-                  <%= form_tag users_path, :method => 'get' do %>
-                      <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
-                  <% end %>
-                  <% Tag.all.each do |tag| %>
-                    <div class="tag-thin-gap"><p><%= link_to tag.name, tag_user_path(tag.name) %></p></div>
-                  <%end%>
-              </section>
-              <div class="posts">
-                  <% @users.each do |user| %>
-                  <article>
-                    <%= link_to user do %>
-                      <span class="image object">
-                            <%= image_tag user.picture.url if user.picture? %>
-                      </span>
-                      <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
-                      <p id = "role"><%= user.role %></p>
-                      <p><%= user.title %></p>
-                      <div class="tag-index">
-                          <% user.tag_list.each do |tag| %>
-                             <div class="tag-thin-gap"><p><%= link_to tag, tag_user_path(tag) %></p></div>
-                          <%end%>
-                      </div>
-                      <ul class="actions">
-                        <li><% link_to "MORE", users_path(user) %></li>
-                      </ul>
-                    <% end %>
-                  </article>
-              <% end %>
-             </div>
-              </div>
+                  <section id="search" class="alt">
+                      <%= form_tag users_path, :method => 'get' do %>
+                          <%= text_field_tag :search, params[:search], :placeholder => "Search", :id => "query" %>
+                      <% end %>
+                      <% Tag.all.each do |tag| %>
+                        <div class="tag-thin-gap"><p><%= link_to tag.name, tag_user_path(tag.name) %></p></div>
+                      <%end%>
+                  </section>
             </section>
-
         </div>
-    </div>
 
-</div>
+
+            <div class="col-md-4" id="find">
+                <% half = @users.length / 2 %>
+                      <div class="posts">
+                          <% @users[0, half].each do |user| %>
+                          <article>
+                                <%= link_to user do %>
+                                  <span class="image object">
+                                        <%= image_tag user.picture.url if user.picture? %>
+                                  </span>
+                                  <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
+                                  <p id = "role"><%= user.role %></p>
+                                  <p><%= user.title %></p>
+                                  <div class="tag-index">
+                                      <% user.tag_list.each do |tag| %>
+                                         <div class="tag-thin-gap"><p><%= link_to tag, tag_user_path(tag) %></p></div>
+                                      <%end%>
+                                  </div>
+                                  <ul class="actions">
+                                    <li><% link_to "MORE", users_path(user) %></li>
+                                  </ul>
+                                <% end %>
+                          </article>
+                      <% end %>
+                     </div>
+             </div>
+
+             <div class="col-md-4" id="find" id="find-index">
+                 <% half = @users.length / 2 %>
+                       <div class="posts">
+                           <% @users[half, @users.length].each do |user| %>
+                           <article>
+                                 <%= link_to user do %>
+                                   <span class="image object">
+                                         <%= image_tag user.picture.url if user.picture? %>
+                                   </span>
+                                   <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
+                                   <p id = "role"><%= user.role %></p>
+                                   <p><%= user.title %></p>
+                                   <div class="tag-index">
+                                       <% user.tag_list.each do |tag| %>
+                                          <div class="tag-thin-gap"><p><%= link_to tag, tag_user_path(tag) %></p></div>
+                                       <%end%>
+                                   </div>
+                                   <ul class="actions">
+                                     <li><% link_to "MORE", users_path(user) %></li>
+                                   </ul>
+                                 <% end %>
+                           </article>
+                       <% end %>
+                      </div>
+              </div>
+    </div>
