@@ -7,13 +7,10 @@ class UsersController < ApplicationController
   # GET /users.json
 
   def index
-    set_tags
-    set_user_type
-    set_tags_for_users
     if params[:tag]
-        @users = User.all_except(current_user).tagged_with(params[:tag])
+        @users = User.all_except(current_user).where.not(role: current_user.role).tagged_with(params[:tag])
     else
-        @users = User.all_except(current_user).search(params[:search])
+        @users = User.all_except(current_user).where.not(role: current_user.role).search(params[:search])
     end
   end
 
@@ -52,36 +49,6 @@ class UsersController < ApplicationController
   end
 
   private
-
-    def set_tags
-         @tags = Tag.all
-         @tag_array = Array.new
-         @tags.each do |tag|
-             @tag_array.append(tag.name)
-         end
-    end
-
-    def set_user_type
-         if current_user.role == "student" || current_user.role == "alumni"
-              @users = User.role("mentor") + User.role("student") + User.role("alumni")
-
-          elsif current_user.role == "mentor"
-              @users = User.role("student")
-          else
-             @users = User.all
-         end
-    end
-
-
-    def set_tags_for_users
-         @users.each do |user|
-             @tag_array_select = Array.new
-             user.tag_list.each do |tag|
-                 @tag_array_select.append(tag)
-             end
-         end
-    end
-
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
@@ -90,7 +57,7 @@ class UsersController < ApplicationController
     def profile_filled
         if current_user
             if current_user.description == ""
-            flash[:notice] = "Fill in your profile!"
+                flash[:notice] = "Fill in your profile!"
             end
         end
     end
