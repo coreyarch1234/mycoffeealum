@@ -5,64 +5,63 @@
             <% User.all.where.not(role: current_user.role).shuffle.each do |u| %>
             <% end %>
         </div> -->
-
         <div class="col-md-3 box" id="tag-filter" >
-            <div class='wave -one'></div>
-            <div class='wave -two'></div>
-            <div class='wave -three'></div>
-            <section>
-                  <section id="search" class="alt">
-                      <%= form_tag users_path, :method => 'get' do %>
-                          <%= text_field_tag :search, params[:search], :placeholder => "Find", :id => "query" %>
-                      <% end %>
-                      <!-- <% Tag.all.each do |tag| %>
-                        <div class="tag-thin-gap"><p><%= link_to tag.name, tag_user_path(tag.name) %></p></div>
-                      <%end%> -->
-                  </section>
-            </section>
-            <article class="long-height">
-                    <div class='box'>
-                      <div class='wave -one'></div>
-                      <div class='wave -two'></div>
-                      <div class='wave -three'></div>
-                      <div class='title' style="color: #fae596;">Recommended</div>
-                   </div>
-                   <div class='box'>
+            <div class="posts">
+                <article>
+                    <div class='wave -one'></div>
+                    <div class='wave -two'></div>
+                    <div class='wave -three'></div>
+                    <section id="search" class="alt">
+                         <%= form_tag users_path, :method => 'get' do %>
+                             <%= text_field_tag :search, params[:search], :placeholder => "Find", :id => "query" %>
+                         <% end %>
+                          <% Tag.all.each do |tag| %>
+                            <div class="tag-thin-gap"><p><%= link_to tag.name, tag_user_path(tag.name) %></p></div>
+                          <%end%>
+                    </section>
+                </article>
+               <article class="long-height">
+                  <!-- <div class='box'>
                      <div class='wave -one'></div>
                      <div class='wave -two'></div>
                      <div class='wave -three'></div>
-                     <div class='title'>Mobile Developers</div>
+                     <div class='title' style="color: #fae596;">Recommended</div>
+                  </div> -->
+                  <div class='box'>
+                     <div class='wave -one'></div>
+                     <div class='wave -two'></div>
+                     <div class='wave -three'></div>
+                    <div class='title'><%= link_to "food", tag_user_path("food") %></div>
                   </div>
                   <div class='box'>
                     <div class='wave -one'></div>
                     <div class='wave -two'></div>
                     <div class='wave -three'></div>
                     <div class='title'>Web Developers</div>
-                 </div>
+                  </div>
+                  <div class='box'>
+                    <div class='wave -one'></div>
+                    <div class='wave -two'></div>
+                    <div class='wave -three'></div>
+                    <div class='title' >UI/UX</div>
+                  </div>
                  <div class='box'>
                    <div class='wave -one'></div>
                    <div class='wave -two'></div>
                    <div class='wave -three'></div>
-                   <div class='title' >UI/UX</div>
-                </div>
-                <div class='box'>
-                  <div class='wave -one'></div>
-                  <div class='wave -two'></div>
-                  <div class='wave -three'></div>
-                  <div class='title'>Entrepreneurs</div>
-               </div>
-            </article>
-        </div>
+                   <div class='title'>Entrepreneurs</div>
+                 </div>
+               </article>
+           </div>
+         </div>
 
 
-            <div class="col-md-4 box" id="find">
-                <!-- <div class='wave -one'></div>
-                <div class='wave -two'></div>
-                <div class='wave -three'></div> -->
-                <% half = @users.length / 2 %>
+        <div class="col-md-8 box">
+            <% half = @users.length / 2 %>
+            <% @users[0, half].each do |user| %>
+                <div class="half-card find">
                       <div class="posts">
-                          <% @users[0, half].each do |user| %>
-                          <article>
+                              <article>
                                 <%= link_to user do %>
                                   <span class="image object">
                                         <%= image_tag user.picture.url if user.picture? %>
@@ -79,19 +78,15 @@
                                     <li><% link_to "MORE", users_path(user) %></li>
                                   </ul>
                                 <% end %>
-                          </article>
-                      <% end %>
+                              </article>
                      </div>
-             </div>
-
-             <div class="col-md-4 box" id="find">
-                 <!-- <div class='wave -one'></div>
-                 <div class='wave -two'></div>
-                 <div class='wave -three'></div> -->
-                 <% half = @users.length / 2 %>
+               </div>
+            <% end %>
+            <% half = @users.length / 2 %>
+            <% @users[half, @users.length].each do |user| %>
+                <div class="half-card find">
                        <div class="posts">
-                           <% @users[half, @users.length].each do |user| %>
-                           <article>
+                               <article>
                                  <%= link_to user do %>
                                    <span class="image object">
                                          <%= image_tag user.picture.url if user.picture? %>
@@ -108,9 +103,10 @@
                                      <li><% link_to "MORE", users_path(user) %></li>
                                    </ul>
                                  <% end %>
-                           </article>
-                       <% end %>
+                               </article>
                       </div>
-              </div>
+                 </div>
+          <% end %>
+      </div>
     </div>
 </div>
