@@ -15,42 +15,17 @@
                          <%= form_tag users_path, :method => 'get' do %>
                              <%= text_field_tag :search, params[:search], :placeholder => "Find", :id => "query" %>
                          <% end %>
-                          <!-- <% Tag.all.each do |tag| %>
-                            <div class="tag-thin-gap"><p><%= link_to tag.name, tag_user_path(tag.name) %></p></div>
-                          <%end%> -->
                     </section>
                 </article>
                <article class="long-height">
-                  <!-- <div class='box'>
-                     <div class='wave -one'></div>
-                     <div class='wave -two'></div>
-                     <div class='wave -three'></div>
-                     <div class='title' style="color: #fae596;">Recommended</div>
-                  </div> -->
-                  <div class='box'>
-                     <div class='wave -one'></div>
-                     <div class='wave -two'></div>
-                     <div class='wave -three'></div>
-                    <div class='title'><%= link_to "Mobile Development", tag_user_path("Mobile Development") %></div>
-                  </div>
-                  <div class='box'>
-                    <div class='wave -one'></div>
-                    <div class='wave -two'></div>
-                    <div class='wave -three'></div>
-                    <div class='title'><%= link_to "Web Development", tag_user_path("Web Development") %></div>
-                  </div>
-                  <div class='box'>
-                    <div class='wave -one'></div>
-                    <div class='wave -two'></div>
-                    <div class='wave -three'></div>
-                    <div class='title' ><%= link_to "UI/UX", tag_user_path("UI/UX") %></div>
-                  </div>
-                 <div class='box'>
-                   <div class='wave -one'></div>
-                   <div class='wave -two'></div>
-                   <div class='wave -three'></div>
-                   <div class='title'><%= link_to "Product Development", tag_user_path("Product Development") %></div>
-                 </div>
+                  <% Tag.all.each do |tag| %>
+                    <div class='box'>
+                       <div class='wave -one'></div>
+                       <div class='wave -two'></div>
+                       <div class='wave -three'></div>
+                      <div class='title' id="tag-link"><%= link_to tag.name, tag_user_path(tag.name)%></div>
+                    </div>
+                  <%end%>
                </article>
            </div>
          </div>
