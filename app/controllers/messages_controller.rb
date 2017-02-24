@@ -37,5 +37,3 @@ private
     params.require(:message).permit(:body, :user_id)
   end
 end
-
-end
