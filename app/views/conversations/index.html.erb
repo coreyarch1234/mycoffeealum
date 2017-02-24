@@ -1,0 +1,60 @@
+<div class=”ui segment”>
+ <h3>Mailbox</h3>
+ <div class=”ui list”>
+  <div class=”item”>
+   <% @conversations.each do |conversation| %>
+   <% if conversation.sender_id == current_user.id ||      conversation.recipient_id == current_user.id %>
+    <% if conversation.sender_id == current_user.id %>
+      <% recipient = User.find(conversation.recipient_id) %>
+    <% else %>
+      <% recipient = User.find(conversation.sender_id) %>
+    <% end %>
+    <%= link_to recipient.first_name,   conversation_messages_path(conversation)%>
+   <% end %>
+  <% end %>
+  </div>
+ </div>
+</div>
+<div class=”ui segment”>
+ <h3>All Users</h3>
+  <div class=”ui list”>
+   <% @users.each do |user| %>
+    <% if user.id != current_user.id %>
+     <div class=”item”>
+   <%= user.first_name %> <%= link_to ‘Message me!’, conversations_path(sender_id: current_user.id, recipient_id: user.id), method: ‘post’%>
+ </div>
+  <% end %>
+ <% end %>
+ </div>
+</div>
+
+<% if @over_ten %>
+ <%= link_to ‘Show Previous’, ‘?m=all’ %>
+<% end %>
+<div class=”ui segment”>
+ <% @messages.each do |message| %>
+  <% if message.body %>
+   <% user = User.find(message.user_id) %>
+   <div class=”item”>
+    <div class=”content”>
+     <div class=”header”><strong><%= user.first_name %></strong>     <%= message.message_time %></div>
+      <div class=”list”>
+       <div class=”item”>
+        <i class=”right triangle icon”></i>
+         <%= message.body %>
+      </div>
+    </div>
+   </div>
+ </div>
+ <% end %>
+<% end %>
+</div>
+<%= form_for [@conversation, @message], html: {class: “ui reply form”} do |f| %>
+ <div class=”field”>
+   <%= f.text_area :body, class: “form-control” %>
+ </div>
+ <%= f.text_field :user_id, value: current_user.id, type: “hidden” %>
+ <div>
+   <%= f.submit “Add Reply”, class: “ui blue labeled submit icon button” %>
+ </div>
+<% end %>
