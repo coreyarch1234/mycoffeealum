@@ -1,7 +1,28 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-  has_many :conversations, :foreign_key => :sender_id
+
+  #Mentor/Mentee Connections
+
+  # source: :mentor matches with the belong_to :mentor identification in the Connection model
+  has_many :mentor_connections, foreign_key: :mentee_id, class_name: "Connection", dependent: :destroy
+  has_many :mentors, through: :mentor_connections, source: :mentor
+  # mentor_connections "names" the Connection join table for accessing through the mentor association
+
+  # source: :mentee matches with the belong_to :mentee identification in the Connection model
+  has_many :mentee_connections, foreign_key: :mentor_id, class_name: "Connection", dependent: :destroy
+  has_many :mentees, through: :mentee_connections, source: :mentee
+  # mentor_connections "names" the Connection join table for accessing through the mentee association
+
+
+
+
+
+
+  #Message System
+  has_many :conversations, :foreign_key => :sender_id, dependent: :destroy
+
+  #User attributes
   scope :role, -> (role) { where role: role }
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable

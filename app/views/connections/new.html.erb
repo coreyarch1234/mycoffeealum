@@ -1,0 +1,23 @@
+<!-- <%= form_for(@connection) do |f| %>
+  <div class="field">
+    <%= f.label :mentee_id %>
+    <%= f.text_field :mentee_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :mentor_id %>
+    <%= f.text_field :mentor_id %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit  %>
+  </div>
+<% end %> -->
+
+<%= form_tag({controller: "connections", action: "create"}) do %>
+    <%= label_tag(:mentee_id, "Mentee Id") %>
+    <%= text_field_tag(:mentee_id) %>
+    <%= label_tag(:mentor_id, "Mentor Id") %>
+    <%= text_field_tag(:mentor_id) %>
+    <%= submit_tag("Search") %>
+<% end %>

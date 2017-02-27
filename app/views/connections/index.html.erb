@@ -1,0 +1,7 @@
+<h1>Connection#index</h1>
+<div>
+  <p>HELLO</p>
+  <% @connections.each do |c| %>
+     <p><%= c.mentor.first_name %> - <%= c.mentee.first_name %></p>
+  <% end %>
+</div>

@@ -1,10 +1,18 @@
 Rails.application.routes.draw do
+  get 'connection/index'
+
+  get 'connection/create'
+
+  get 'connection/destroy'
+
   resources :tags
   get 'tag/:tag', to: 'users#index', as: :tag_user
 
   resources :conversations do
       resources :messages
   end
+
+  resources :connections
 
   devise_for :users, :path => 'u', controllers: {
     sessions: 'users/sessions',
