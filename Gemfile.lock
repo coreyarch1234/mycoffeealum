@@ -1,8 +1,15 @@
+GIT
+  remote: https://github.com/doabit/semantic-ui-sass.git
+  revision: 4abe03d57f2be11d8759823a440e62e8fb1afe77
+  specs:
+    semantic-ui-sass (2.2.9.0)
+      sass (>= 3.2)
+
 GEM
   remote: https://rubygems.org/
   remote: https://rails-assets.org/
   specs:
-    CFPropertyList (2.3.4)
+    CFPropertyList (2.3.5)
     actioncable (5.0.1)
       actionpack (= 5.0.1)
       nio4r (~> 1.2)
@@ -43,13 +50,13 @@ GEM
     acts-as-taggable-on (4.0.0)
       activerecord (>= 4.0)
     arel (7.1.4)
-    autoprefixer-rails (6.6.0)
+    autoprefixer-rails (6.7.5)
       execjs
     bcrypt (3.1.11)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
-    builder (3.2.2)
+    builder (3.2.3)
     byebug (9.0.6)
     carrierwave (0.11.2)
       activemodel (>= 3.2.0)
@@ -73,9 +80,9 @@ GEM
       responders
       warden (~> 1.2.3)
     erubis (2.7.0)
-    excon (0.54.0)
+    excon (0.55.0)
     execjs (2.7.0)
-    ffi (1.9.14)
+    ffi (1.9.17)
     fission (0.5.0)
       CFPropertyList (~> 2.2)
     fog (1.38.0)
@@ -115,7 +122,7 @@ GEM
     fog-atmos (0.1.0)
       fog-core
       fog-xml
-    fog-aws (0.13.0)
+    fog-aws (1.2.0)
       fog-core (~> 1.38)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
@@ -149,7 +156,7 @@ GEM
       multi_json (~> 1.10)
     fog-local (0.3.1)
       fog-core (~> 1.27)
-    fog-openstack (0.1.18)
+    fog-openstack (0.1.20)
       fog-core (>= 1.40)
       fog-json (>= 1.0)
       ipaddress (>= 0.8)
@@ -160,7 +167,7 @@ GEM
     fog-profitbricks (3.0.0)
       fog-core (~> 1.42)
       fog-json (~> 1.0)
-    fog-rackspace (0.1.2)
+    fog-rackspace (0.1.4)
       fog-core (>= 1.35)
       fog-json (>= 1.0)
       fog-xml (>= 0.1)
@@ -194,7 +201,7 @@ GEM
     fog-voxel (0.1.0)
       fog-core
       fog-xml
-    fog-vsphere (1.5.2)
+    fog-vsphere (1.7.1)
       fog-core
       rbvmomi (~> 1.9)
     fog-xenserver (0.2.3)
@@ -206,17 +213,17 @@ GEM
     formatador (0.2.5)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    i18n (0.7.0)
+    i18n (0.8.1)
     inflecto (0.0.2)
     ipaddress (0.8.3)
-    jbuilder (2.6.1)
-      activesupport (>= 3.0.0, < 5.1)
+    jbuilder (2.6.3)
+      activesupport (>= 3.0.0, < 5.2)
       multi_json (~> 1.2)
     jquery-rails (4.2.2)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
       thor (>= 0.14, < 2.0)
-    json (2.0.2)
+    json (2.0.3)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -234,11 +241,11 @@ GEM
     minitest (5.10.1)
     multi_json (1.12.1)
     nio4r (1.2.1)
-    nokogiri (1.7.0)
+    nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
     pg (0.19.0)
-    puma (3.6.2)
+    puma (3.7.1)
     rack (2.0.1)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -270,7 +277,7 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rake (12.0.0)
     rb-fsevent (0.9.8)
-    rb-inotify (0.9.7)
+    rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     rbvmomi (1.9.4)
       builder (~> 3.2)
@@ -279,7 +286,7 @@ GEM
       trollop (~> 2.1)
     responders (2.3.0)
       railties (>= 4.2.0, < 5.1)
-    ruby_http_client (3.0.0)
+    ruby_http_client (3.0.1)
     sass (3.4.23)
     sass-rails (5.0.6)
       railties (>= 4.0.0, < 6)
@@ -287,9 +294,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
-    sendgrid-ruby (4.0.6)
-      ruby_http_client (~> 3.0.0)
-    spring (2.0.0)
+    sendgrid-ruby (4.0.8)
+      ruby_http_client (~> 3.0.1)
+    spring (2.0.1)
       activesupport (>= 4.2)
     spring-watcher-listen (2.0.1)
       listen (>= 2.7, < 4.0)
@@ -302,8 +309,8 @@ GEM
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
     thor (0.19.4)
-    thread_safe (0.3.5)
-    tilt (2.0.5)
+    thread_safe (0.3.6)
+    tilt (2.0.6)
     trollop (2.1.2)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
@@ -312,14 +319,14 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.4)
       execjs (>= 0.3.0, < 3)
-    warden (1.2.6)
+    warden (1.2.7)
       rack (>= 1.0)
     web-console (3.4.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
       debug_inspector
       railties (>= 5.0)
-    websocket-driver (0.6.4)
+    websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
     xml-simple (1.1.5)
@@ -344,6 +351,7 @@ DEPENDENCIES
   rails (~> 5.0.1)
   rails-assets-chosen!
   sass-rails (~> 5.0)
+  semantic-ui-sass!
   sendgrid-ruby
   spring
   spring-watcher-listen (~> 2.0.0)

@@ -15,12 +15,4 @@
 //= require turbolinks
 //= require_tree .
 //= require chosen
-
-// $(document).ready(function() {
-//   $('#tag-link').click(function(event){
-//     alert('Hooray!');
-//     // window.location.href = 'http://localhost:3000/tag/Product%20Development';
-//     <%=redirect_to controller: "users", action: "index", :tag => "Web Development" %>
-//     // event.preventDefault(); // Prevent link from following its href
-//   });
-// });
+//= require semantic-ui
