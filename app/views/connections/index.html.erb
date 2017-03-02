@@ -1,7 +1,23 @@
-<h1>Connection#index</h1>
-<div>
-  <p>HELLO</p>
-  <% @connections.each do |c| %>
-     <p><%= c.mentor.first_name %> - <%= c.mentee.first_name %></p>
+<!-- <div class="ui segment">
+  <% role_header = "" %>
+  <% if @conversation.sender_id == current_user.id %>
+     <% role_header = "Mentors" %>
+  <% else %>
+     <% role_header = "Mentees"%>
   <% end %>
-</div>
+ <h3>Mailbox</h3>
+ <div class="ui list">
+  <div class="item">
+   <% @conversations.each do |conversation| %>
+   <% if conversation.sender_id == current_user.id ||      conversation.recipient_id == current_user.id %>
+    <% if conversation.sender_id == current_user.id %>
+      <% recipient = User.find(conversation.recipient_id) %>
+    <% else %>
+      <% recipient = User.find(conversation.sender_id) %>
+    <% end %>
+    <%= link_to recipient.first_name,   conversation_messages_path(conversation)%>
+   <% end %>
+  <% end %>
+  </div>
+ </div>
+</div> -->

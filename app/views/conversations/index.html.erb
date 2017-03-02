@@ -1,5 +1,11 @@
 <div class="ui segment">
- <h3>Mailbox</h3>
+  <% role_header = "" %>
+  <% if current_user.role == "student"%>
+     <% role_header = "Mentors" %>
+  <% else %>
+     <% role_header = "Mentees"%>
+  <% end %>
+ <h3><%= role_header%></h3>
  <div class="ui list">
   <div class="item">
    <% @conversations.each do |conversation| %>
@@ -15,7 +21,7 @@
   </div>
  </div>
 </div>
-<div class="ui segment">
+<!-- <div class="ui segment">
  <h3>All Users</h3>
   <div class="ui list">
    <% @users.each do |user| %>
@@ -26,4 +32,4 @@
   <% end %>
  <% end %>
  </div>
-</div>
+</div> -->

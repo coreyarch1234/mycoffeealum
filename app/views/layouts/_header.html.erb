@@ -2,8 +2,15 @@
   <%= link_to image_tag("logo2.png"), users_path, class: 'logo' %>
   <ul class="icons">
     <% if user_signed_in? %>
-      <li><%= link_to "Find",  root_path, class: "logo" %></li>
-      <li><%= link_to "Profile",  user_path(current_user), class: "logo" %></li>
+        <% if current_user.role == "student"  %>
+          <li><%= link_to "Find",  root_path, class: "logo" %></li>
+          <li><%= link_to "Profile",  user_path(current_user), class: "logo" %></li>
+          <li><%= link_to "Mentors",  conversations_path, class: "logo" %></li>
+        <% elsif current_user.role == "mentor"  %>
+          <li><%= link_to "Find",  root_path, class: "logo" %></li>
+          <li><%= link_to "Profile",  user_path(current_user), class: "logo" %></li>
+          <li><%= link_to "Mentees",  conversations_path, class: "logo" %></li>
+        <% end %>
       <% if current_user.admin %>
         <li><%= link_to "Tags",  tags_path, class: "logo" %></li>
       <% end %>
