@@ -9,6 +9,15 @@
     margin: 1em 0 1em 1em !important;
 }
 
+.posts article .image {
+    width: 10%;
+    float: left;
+    padding-right: 2em;
+    margin: 1em 0 1em 1em !important;
+}
+
+
+
 a {
   text-decoration: none !important;
 }
@@ -99,6 +108,14 @@ body {
 
 .half-card{
     width: calc(50% - 35px);
+    float: left;
+    border-radius: 5px;
+}
+
+.full-card{
+    width: calc(100%);
+    margin-bottom: 2em;
+    height: 50%;
     float: left;
     border-radius: 5px;
 }
