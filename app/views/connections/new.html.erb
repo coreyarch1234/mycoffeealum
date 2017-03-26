@@ -12,22 +12,22 @@
             <% half = @users.length / 2 %>
             <% @users[0, half].each do |user| %>
                 <div class="half-card find">
-                      <div class="posts">
-                              <article>
-                                <%= link_to user do %>
-                                  <span class="image object">
-                                        <%= image_tag user.picture.url if user.picture? %>
-                                  </span>
-                                  <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
-                                  <p id = "role"><%= user.role %></p>
-                                  <p><%= user.title %></p>
-                                  <p><%= user.id %></p>
-                                  <ul class="actions">
-                                    <li><% link_to "MORE", users_path(user) %></li>
-                                  </ul>
-                                <% end %>
-                              </article>
-                     </div>
+                  <div class="posts">
+                      <article>
+                        <%= link_to user do %>
+                          <span class="image object">
+                                <%= image_tag user.picture.url if user.picture? %>
+                          </span>
+                          <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
+                          <p id = "role"><%= user.role %></p>
+                          <p><%= user.title %></p>
+                          <p><%= user.id %></p>
+                          <ul class="actions">
+                            <li><% link_to "MORE", users_path(user) %></li>
+                          </ul>
+                        <% end %>
+                      </article>
+                 </div>
                </div>
             <% end %>
         </div>
@@ -35,22 +35,22 @@
             <% half = @users.length / 2 %>
             <% @users[half, @users.length].each do |user| %>
                 <div class="half-card find">
-                       <div class="posts">
-                               <article>
-                                 <%= link_to user do %>
-                                   <span class="image object">
-                                         <%= image_tag user.picture.url if user.picture? %>
-                                   </span>
-                                   <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
-                                   <p id = "role"><%= user.role %></p>
-                                   <p><%= user.title %></p>
-                                   <p><%= user.id %></p>
-                                   <ul class="actions">
-                                     <li><% link_to "MORE", users_path(user) %></li>
-                                   </ul>
-                                 <% end %>
-                               </article>
-                      </div>
+                   <div class="posts">
+                       <article>
+                         <%= link_to user do %>
+                           <span class="image object">
+                                 <%= image_tag user.picture.url if user.picture? %>
+                           </span>
+                           <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
+                           <p id = "role"><%= user.role %></p>
+                           <p><%= user.title %></p>
+                           <p><%= user.id %></p>
+                           <ul class="actions">
+                             <li><% link_to "MORE", users_path(user) %></li>
+                           </ul>
+                         <% end %>
+                       </article>
+                  </div>
                  </div>
           <% end %>
       </div>

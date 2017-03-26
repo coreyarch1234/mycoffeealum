@@ -1,30 +1,8 @@
-<!--
-<div class="half-card find">
-      <div class="posts">
-              <article>
-                <%= user = User.find(@conversation.recipient_id) %>
-                <%= link_to user do %>
-                  <span class="image object">
-                        <%= image_tag user.picture.url if user.picture? %>
-                  </span>
-                  <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
-                  <p><%= user.title %></p>
-                  <ul class="actions">
-                    <li><% link_to "MORE", users_path(user) %></li>
-                  </ul>
-                <% end %>
-              </article>
-     </div>
-</div> -->
-
 <div class="container ">
     <div class="row ">
         <div class="col-md-12">
-            <h1>Messages</h1>
             <% if current_user.id == @conversation.sender_id %>
-               <!-- <div>
-                   <p>Your mentor is: <%= User.find(@conversation.recipient_id).first_name %>. <%= User.find(@conversation.recipient_id).description %> </p>
-               </div> -->
+            <h1>Mentor Messages</h1>
                <div class="full-card find">
                      <div class="posts">
                              <article>
@@ -40,24 +18,22 @@
                     </div>
                </div>
             <% elsif current_user.id == @conversation.recipient_id %>
-                <!-- <div>
-                    <p>Your mentee is: <%= User.find(@conversation.sender_id).first_name %>. <%= User.find(@conversation.sender_id).description %> </p>
-                </div> -->
-                <div class="half-card find">
+            <h1>Mentee Messages</h1>
+                <div class="full-card find">
                       <div class="posts">
-                              <article>
-                                <%= user = User.find(@conversation.sender_id) %>
-                                <%= link_to user do %>
-                                  <span class="image object">
-                                        <%= image_tag user.picture.url if user.picture? %>
-                                  </span>
-                                  <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
-                                  <p><%= user.title %></p>
-                                  <ul class="actions">
-                                    <li><% link_to "MORE", users_path(user) %></li>
-                                  </ul>
-                                <% end %>
-                              </article>
+                          <article>
+                            <%= user = User.find(@conversation.sender_id) %>
+                            <%= link_to user do %>
+                              <span class="image object">
+                                    <%= image_tag user.picture.url if user.picture? %>
+                              </span>
+                              <h3><%= "#{user.first_name} #{user.last_name}" %></h3>
+                              <p><%= user.title %></p>
+                              <ul class="actions">
+                                <li><% link_to "MORE", users_path(user) %></li>
+                              </ul>
+                            <% end %>
+                          </article>
                      </div>
                 </div>
             <% end %>
@@ -79,7 +55,7 @@
                <% user = User.find(message.user_id) %>
                <div class="item">
                 <div class="content">
-                 <div class="header"><strong><%= user.first_name %></strong>     <%= message.message_time %></div>
+                 <div class="header"><strong><%= user.first_name %></strong><%= message.message_time %></div>
                   <div class="list">
                    <div class="item">
                     <i class="right triangle icon"></i>
@@ -113,7 +89,7 @@
             <!--  If the current user is a mentee, they will have a sender id and if they are a mentor, they will have a recipient id
             . If they are a mentee, they will see the mentor profile when they are matched and vice versa.  The mentee will have a placeholder text
             that says to schedule a meeting with the mentor. -->
-             <% if current_user.id == @conversation.sender_id %>
+             <!-- <% if current_user.id == @conversation.sender_id %>
                 <div>
                     <h1>Mentor Match Profile:</h1>
                     <p>Your mentor is: <%= User.find(@conversation.recipient_id).first_name %>. <%= User.find(@conversation.recipient_id).description %> </p>
@@ -123,12 +99,10 @@
                      <h1>Mentee Match Profile</h1>
                      <p>Your mentee is: <%= User.find(@conversation.sender_id).first_name %>. <%= User.find(@conversation.sender_id).description %> </p>
                  </div>
-             <% end %>
-
+             <% end %> -->
             </div>
         </div>
     </div>
-
     <div class="row">
         <div class=" col-md-12">
             <%= form_for [@conversation, @message], html: {class: 'ui reply form'} do |f| %>
