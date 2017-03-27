@@ -16,6 +16,7 @@ class ConnectionsController < ApplicationController
       @mentor = User.find(params[:mentor_id])
       @mentee = User.find(params[:mentee_id])
       @connection = Connection.create!(mentee_id: @mentee.id, mentor_id: @mentor.id)
+      MakeMentorMailer.sample_email(User.find(7)).deliver
       if Conversation.between(params[:sender_id],params[:recipient_id]).present?
           @conversation = Conversation.between(params[:sender_id],
           params[:recipient_id]).first
