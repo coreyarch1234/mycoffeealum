@@ -6,14 +6,6 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
 
-  def index
-    if params[:tag]
-        @users = User.all_except(current_user).where.not(role: current_user.role).tagged_with(params[:tag])
-    else
-        @users = User.all_except(current_user).where.not(role: current_user.role).search(params[:search])
-    end
-  end
-
   # GET /users/1
   # GET /users/1.json
   def show

@@ -23,7 +23,7 @@ Rails.application.routes.draw do
   resources :users, except: [:new, :create]
 
   authenticated :user do
-    root :to => 'users#index', as: :authenticated_root
+    root :to => 'static#home', as: :authenticated_root
   end
   root :to => 'static#home'
 end
