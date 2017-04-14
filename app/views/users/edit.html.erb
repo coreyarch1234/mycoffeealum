@@ -1,73 +1,73 @@
-<div class='col-sm-12 col-md-6 col-md-offset-3'>
-  <header class="major">
-    <% if @user.first_name %>
-      <h2><%= "#{@user.first_name} #{@user.last_name}" %></h2>
-    <% else %>
-      <h3><%= "Welcome! Please fill in the following to get started." %></h3>
-    <% end %>
-  </header>
+<header class="major">
+    <h3><%= "Welcome! Tell us a bit about yourself so you can be matched!" %></h3>
+</header>
 
-  <%= form_for(@user) do |f| %>
-    <% if @user.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
-        <ul>
-        <% @user.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-
-    <div class="field">
-      <%= f.label :first_name %>
-      <%= f.text_field :first_name %>
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
     </div>
-
-    <div class="field">
-      <%= f.label :last_name %>
-      <%= f.text_field :last_name %>
-    </div>
-
-    <div class="field">
-      <%= f.label :role %><br/>
-      <%= f.select(:role, User.roles.keys.map {|role| [role.titleize, role]}) %>
-    </div>
-
-    <div class="field">
-      <%= f.label 'Position and Organization' %>
-      <%= f.text_field :title,  placeholder: "Software Engineer at Lyft. Computer Science at Make School, etc." %>
-    </div>
-
-    <div class="field">
-      <%= f.label 'Describe Yourself' %>
-      <%= f.text_area :description,  placeholder: "Talk about your skills, prior experiences, hobbies, etc?" %>
-    </div>
-
-    <div class="field">
-      <%= f.label 'LinkedIn' %>
-      <%= f.text_field :linkedin_url %>
-    </div>
-
-    <div class="field">
-      <%= f.label :tag_list, "Tags, choose your proficient skills (max 8)" %>
-      <%= f.collection_check_boxes :tag_ids, Tag.order(:name), :id, :name, {}, {multiple: true} %>
-    </div>
-
-    <div class="field picture">
-      <%= f.label :picture %>
-      <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
-    </div>
-
-    <div class="actions contact">
-      <%= f.submit %>
-    </div>
-
-    <%= link_to "Create New Password",  edit_user_registration_path, target: '_blank' %>
   <% end %>
-</div>
 
+<div class="col-xs-4">
+
+      <div class="field">
+        <%= f.label :first_name %>
+        <%= f.text_field :first_name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name %>
+      </div>
+
+      <div class="field">
+        <%= f.label :role %><br/>
+        <%= f.select(:role, User.roles.keys.map {|role| [role.titleize, role]}) %>
+      </div>
+
+      <div class="field">
+        <%= f.label :location %>
+        <%= f.text_field :location %>
+      </div>
+
+      <div class="actions contact">
+        <%= f.submit %>
+      </div>
+      
+      <%= link_to "Create New Password",  edit_user_registration_path, target: '_blank' %>
+  </div>
+<div class="col-xs-8">
+      <div class="field">
+        <%= f.label 'Position and Organization' %>
+        <%= f.text_field :title,  placeholder: "Software Engineer at Lyft. Computer Science at Make School, etc." %>
+      </div>
+
+      <div class="field">
+        <%= f.label 'Describe Yourself' %>
+        <%= f.text_area :description,  placeholder: "Talk about your skills, prior experiences, hobbies, etc?" %>
+      </div>
+
+      <div class="field">
+        <%= f.label 'LinkedIn' %>
+        <%= f.text_field :linkedin_url %>
+      </div>
+
+      <div class="field picture">
+        <%= f.label :picture %>
+        <%= f.file_field :picture, accept: 'image/jpeg,image/gif,image/png' %>
+      </div>
+
+
+  </div>
+
+<% end %>
 
 <script type="text/javascript">
   $('#picture').bind('change', function() {

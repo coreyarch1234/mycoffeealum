@@ -3,13 +3,8 @@ class UsersController < ApplicationController
   before_action :profile_filled, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
   before_filter :validate_user, :only => :edit
-  # GET /users
-  # GET /users.json
 
-  # GET /users/1
-  # GET /users/1.json
   def show
-    #   @user = User.find(params[:id])
   end
 
   # GET /users/1/edit
@@ -56,7 +51,7 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:first_name, :last_name, :title, :description, :role,  :linkedin_url, :picture, :tag_list, :tag, { tag_ids: [] }, :tag_ids)
+      params.require(:user).permit(:first_name, :last_name, :title, :description, :role,  :linkedin_url, :picture, :location)
     end
 
    def validate_user
