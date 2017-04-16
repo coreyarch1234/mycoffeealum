@@ -22,9 +22,14 @@ Rails.application.routes.draw do
   get 'static/home'
   resources :users, except: [:new, :create]
 
+
+  get '/info', to: 'users#info', as: :info_path
+
+  get '/blogs', to: 'users#blogs', as: :blog_path
+
   authenticated :user do
     # root :to => 'static#home', as: :authenticated_root
-    root :to => 'users#show', as: :authenticated_root
+    root :to => 'users#info', as: :authenticated_root
 
   end
   root :to => 'static#home'
